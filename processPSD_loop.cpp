@@ -74,7 +74,7 @@ int main( int argc, char* argv[]){
   for ( int iEntry = 0; iEntry < nEntries; iEntry++ ) {
     if ((iEntry+1) % 1000000 == 0) cout << "event n." << iEntry+1 << endl;
     tier->GetEntry(iEntry);
-    if ( energy->at(chn) > 900 ){
+    if ( energy->at(chn) > 800 ){
       energies.push_back(energy->at(chn));
       times.push_back(tempo);
       if ( dplms ) AoEs.push_back(AoE_dplms->at(chn));
@@ -244,32 +244,33 @@ int main( int argc, char* argv[]){
   h_AoE1->Add(h_AoE2);
   h_AoE1->Add(h_AoE3,-1);
   h_AoE->Add(h_AoE1,-1);
-  h_AoE->Scale(1./h_AoE->GetBinContent(h_AoE->GetMaximumBin()));
-  
-  double totIntegral = h_AoE->Integral(1, h_AoE->GetNbinsX());
+  //h_AoE->Scale(1./h_AoE->GetBinContent(h_AoE->GetMaximumBin()));
+
+  double AoE_highCut = mu_AoE + 3.*sigma_AoE;
+  int highBin = h_AoE->GetXaxis()->FindBin(AoE_highCut);
+  //double totIntegral = h_AoE->Integral(1, h_AoE->GetNbinsX());
+  double totIntegral = h_AoE->Integral(1, highBin);
   cout << "Total integral = " << totIntegral << endl;
   
   double SurvFrac_d = 1.;
-  double cutIntegral;
-  int bin_lowCut = 1;
-  while ( SurvFrac_d >= 0.91 ){
-    cutIntegral = h_AoE->Integral(bin_lowCut, h_AoE->GetNbinsX());
+  double cutIntegral = totIntegral;
+  int lowBin = 1;
+  
+  while ( SurvFrac_d >= 0.905 ){
+    cutIntegral = h_AoE->Integral(lowBin, highBin);
     SurvFrac_d = (double)cutIntegral/totIntegral;
-    bin_lowCut++;
+    lowBin++;
   }
-  double AoE_lowCut = h_AoE->GetBinCenter(bin_lowCut);
-  cout << "bin_lowCut = " << bin_lowCut << "   " << "AoE_lowcut = " << AoE_lowCut << endl;      
+  double AoE_lowCut = h_AoE->GetBinCenter(lowBin);
+  cout << "AoE_lowCut = " << lowBin << " -> " << AoE_lowCut << endl;      
   cout << "CutIntegral = " << cutIntegral << endl;
   cout << "SF_dep = " << SurvFrac_d << endl;
   cout << "sigma_aoe = " << sigma_AoE << endl;
-  double AoE_highCut = mu_AoE + 3.*sigma_AoE;
   cout << "AoE_highcut = " << AoE_highCut << endl;
   hAoE->Draw();  
   
-  //----------------------------------------------------
-  //                Print the result
-  //____________________________________________________
-    
+  //------ Print the result -----
+  
   TLine *line_l = new TLine(AoE_lowCut,c1->GetUymin(),AoE_lowCut,1.0);
   line_l->SetLineStyle(10);
   line_l->SetLineColor(2);
@@ -288,8 +289,8 @@ int main( int argc, char* argv[]){
   c1->Update();
   c1->Print(Form("%s/chn%d_AoE_onlyDEP.pdf",resdir,chn));
   
-  
   //-----------Draw the spectrum before and after PSA______________
+  
   TCanvas *c2 = new TCanvas("c2","PSA analysis");
   gStyle->SetPalette(1);
   gStyle->SetOptStat(0);
@@ -318,11 +319,8 @@ int main( int argc, char* argv[]){
   gStyle->SetOptFit(0);
   hene_psa->Fit("f_2gaus", "L+", "sames", min, max);
   
-  double bkg_psa = f_2gaus->GetParameter(6);
-  
-  //------------ calculation of Area of DEP,FEP -----------
-  //----- DEP Area ------
-  
+  //------------ calculation of Area of DEP -----------
+    
   int min_bin = hene->GetXaxis()->FindBin(mu_dep - n_sigma*sigma_dep);
   int max_bin = hene->GetXaxis()->FindBin(mu_dep + n_sigma*sigma_dep);
   int min_bin_1 = hene->GetXaxis()->FindBin(mu_dep - 2*n_sigma*sigma_dep);
@@ -330,10 +328,7 @@ int main( int argc, char* argv[]){
   int max_bin_2 =  hene->GetXaxis()->FindBin(mu_dep + 3*n_sigma*sigma_dep);
   int delta = max_bin - min_bin;
   
-  int count = 0;
-  int sumCount = 0;  
-  int count_psa = 0;
-  int sumCount_psa = 0;
+  int count = 0, sumCount = 0, count_psa = 0, sumCount_psa = 0;
   for (Int_t j = min_bin; j <= max_bin; j++){
     count = hene->GetBinContent(j);
     sumCount += count;
@@ -379,7 +374,7 @@ int main( int argc, char* argv[]){
   double Area_d = Area_d_tot - b1_d;
   cout << "AreaDEP = " << Area_d << endl;
   double b2_d = b2_I + 2*b2_II - b2_III;
-  double Area_d_psa = Area_d_psa_tot - b2_d;//subtraction of background
+  double Area_d_psa = Area_d_psa_tot - b2_d;
   cout << "Area_DEP_psa = " << Area_d_psa << endl;
 
   //////////////////////
@@ -430,8 +425,6 @@ int main( int argc, char* argv[]){
   
   double Acc_d = Area_d_psa/Area_d;
   double Acc_f = Area_f_psa/Area_f;
-  double Acc_bkg = bkg_psa/bkg;
-  
   double Acc_d_e = pow((Area_d_psa_tot+b2_d)*Area_d*Area_d + Area_d_psa*Area_d_psa*(Area_d_tot+b1_d),0.5)/(Area_d*Area_d);
   double Acc_f_e = pow((Area_f_psa_tot+b2_f)*Area_f*Area_f + Area_f_psa*Area_f_psa*(Area_f_tot+b1_f),0.5)/(Area_f*Area_f);
     
@@ -601,7 +594,7 @@ int main( int argc, char* argv[]){
      cout << b.at(i) << endl;
 
   
-  ////////////////// ////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////
   //------------------Survival fraction of SEP----------------------
   //////////////////////////////////////////////////////////////////
 
@@ -957,7 +950,7 @@ int main( int argc, char* argv[]){
     sumCount += count;
   }
   double b2039_psa = sumCount;//total area
-  cout << "Area_tot_psa = " << bkg_psa << endl;
+  cout << "Area_tot_psa = " << b2039_psa << endl;
     
   //------- Accentance calculation --------
   double SF_bkg = 1.*b2039_psa/b2039;

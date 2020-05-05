@@ -5,6 +5,7 @@ Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analys
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_AoE_onlyDEP.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_PSA_DEP_FEP.pdf has been created
 Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <Fit>: Abnormal termination of minimization.
 Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
 Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
 Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).

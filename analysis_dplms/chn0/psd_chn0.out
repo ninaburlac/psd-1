@@ -24,8 +24,8 @@ event n.14000000
 event n.15000000
 event n.16000000
 event n.17000000
-Selected events: 79567
-The time to read waveforms: 42.48 s
+Selected events: 86868
+The time to read waveforms: 40.88 s
 Initialization of DEP&FEP background  = 11.5
  FCN=125.656 FROM MIGRAD    STATUS=CONVERGED     233 CALLS         234 TOTAL
                      EDM=1.36917e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
@@ -51,45 +51,45 @@ mean_aoe = 0.1131
    4  p3           4.29406e-03   5.43164e-03   2.50450e-05   4.64605e-01
    5  p4           2.97004e-03   3.75333e-03   1.73078e-05  -6.60744e-01
                                ERR DEF= 0.5
-Total integral = 26.9333
-bin_lowCut = 730   AoE_lowcut = 0.9918
-CutIntegral = 24.4667
-SF_dep = 0.908416
+Total integral = 797
+AoE_lowCut = 731 -> 0.9922
+CutIntegral = 717
+SF_dep = 0.899624
 sigma_aoe = 0.00706471
 AoE_highcut = 1.024
- FCN=114.722 FROM MIGRAD    STATUS=CONVERGED     168 CALLS         169 TOTAL
-                     EDM=1.67505e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+ FCN=114.166 FROM MIGRAD    STATUS=CONVERGED     134 CALLS         135 TOTAL
+                     EDM=7.78245e-08    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.9 per cent
   EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  p0           9.39915e+01   4.57081e+00   2.69618e-02   1.99813e-05
-   2  p1           1.59284e+03   3.96019e-02   7.59526e-04   8.25624e-04
-   3  p2           9.43593e-01   3.28750e-02   1.99031e-05   2.63244e-02
-   4  p3           5.51060e+00   1.84399e+00   1.17648e-02   5.01308e-04
-   5  p4           1.62087e+03   2.40059e-01   1.77856e-03  -8.32981e-04
-   6  p5           6.78644e-01   1.71185e-01   1.33082e-04  -1.99193e-02
-   7  p6           4.66749e+00   1.60735e-01   1.16169e-03  -2.55311e-03
+   1  p0           9.26611e+01   4.55208e+00   1.16445e-03   3.19321e-06
+   2  p1           1.59284e+03   3.96682e-02   5.71571e-07  -5.93431e-03
+   3  p2           9.49534e-01   3.30434e-02  -2.01351e-06   2.85442e-02
+   4  p3           5.61266e+00   1.87133e+00  -6.13796e-03   6.84477e-05
+   5  p4           1.62090e+03   2.38173e-01   1.96940e-04   1.02073e-03
+   6  p5           6.51938e-01   1.56628e-01   3.35144e-05   2.01389e-03
+   7  p6           4.61956e+00   1.59452e-01   3.95950e-04   5.31684e-04
                                ERR DEF= 0.5
 AreaDEP_tot = 1222
-Area_DEP_tot_psa = 902
+Area_DEP_tot_psa = 894
 AreaDEP = 827
-Area_DEP_psa = 702
+Area_DEP_psa = 696
 Area_FEP_tot = 653
-Area_FEP_tot_psa = 179
+Area_FEP_tot_psa = 175
 Area_FEP = 319
-Area_FEP_psa = 31
+Area_FEP_psa = 29
 Correction of AoE...
- FCN=97.2087 FROM MIGRAD    STATUS=CONVERGED     254 CALLS         255 TOTAL
-                     EDM=3.57893e-08    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.5 per cent
-  EXT PARAMETER                                   STEP         FIRST   
+ FCN=110.729 FROM MIGRAD    STATUS=CALL LIMIT   2126 CALLS        2127 TOTAL
+                     EDM=0.000221312    STRATEGY= 1  ERROR MATRIX UNCERTAINTY  36.7 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  p0           3.27018e+01   2.14221e+00   2.32966e-04   4.65633e-04
-   2  p1           1.00362e+00   6.59152e-04   9.21651e-07   3.16435e-03
-   3  p2           1.14698e-02   6.09356e-04  -1.40234e-05   1.04497e-03
-   4  p3           1.87828e+01   9.02063e-01  -5.58503e-04   1.29295e-04
-   5  p4           8.17328e-01   8.53400e-02  -3.17871e-05  -1.96908e-04
-   6  p5           1.00145e+00   1.46219e-02  -6.81976e-06   3.04763e-02
-   7  p6          -7.42229e-01   1.33427e-02  -1.89306e-05  -4.90334e-03
-   8  p7           1.70097e-02   4.56477e-03  -4.12937e-05   2.39838e-03
+   1  p0           6.70131e+01   2.87511e+00   3.16458e-04   2.65266e-02
+   2  p1           1.00329e+00   4.51847e-04   7.32586e-06   3.20189e-02
+   3  p2           1.17591e-02   3.98390e-04  -1.49576e-04  -1.66139e-04
+   4  p3           3.87870e+02   2.82766e+02  -1.06373e+00  -4.38917e-04
+   5  p4           5.76994e-02   4.23379e-02   2.12298e-04   3.41537e+00
+   6  p5           1.00000e+00   7.57274e-03   8.61649e-06   1.12312e+00
+   7  p6          -9.76252e-01   1.73378e-02   5.41272e-04  -2.23860e+00
+   8  p7           1.74674e-02   2.60415e-03  -1.59796e-04  -1.44895e-03
                                ERR DEF= 0.5
  FCN=85.5679 FROM MIGRAD    STATUS=CONVERGED     976 CALLS         977 TOTAL
                      EDM=6.56747e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
@@ -289,14 +289,14 @@ Correction of AoE...
 
 ****************************************
 Minimizer is Linear
-Chi2                      =      27.9633
+Chi2                      =      31.8851
 NDf                       =           14
-p0                        =      1.00862   +/-   0.000384649 
-p1                        = -4.72732e-06   +/-   2.075e-07   
-1.00862
--4.72732e-06
-0.000384649
-2.075e-07
+p0                        =      1.00837   +/-   0.000365698 
+p1                        = -4.60249e-06   +/-   1.98778e-07 
+1.00837
+-4.60249e-06
+0.000365698
+1.98778e-07
 Calculation of survival fraction for 2104
 Initialization of bkg_2104 =  11.5
  FCN=152.72 FROM MIGRAD    STATUS=CONVERGED     104 CALLS         105 TOTAL
@@ -310,17 +310,17 @@ Initialization of bkg_2104 =  11.5
                                ERR DEF= 0.5
 Area_tot_sep = 1594
 Area_sep = 970
- FCN=156.593 FROM MIGRAD    STATUS=CONVERGED     152 CALLS         153 TOTAL
-                     EDM=4.42841e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+ FCN=157.745 FROM MIGRAD    STATUS=CONVERGED     177 CALLS         178 TOTAL
+                     EDM=1.97824e-09    STRATEGY= 1      ERROR MATRIX ACCURATE 
   EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  p0           7.10556e+00   1.38975e+00   9.87561e-03  -4.30474e-05
-   2  p1           2.10375e+03   2.94041e-01   2.52234e-03  -8.40873e-05
-   3  p2           1.43006e+00   2.53856e-01   1.51109e-04   3.21527e-03
-   4  p3           4.91937e+00   1.39510e-01   1.17319e-03   1.29331e-03
+   1  p0           7.17927e+00   1.43293e+00   1.01128e-02   7.65900e-06
+   2  p1           2.10374e+03   2.85666e-01   2.46013e-03   9.10407e-05
+   3  p2           1.37254e+00   2.56235e-01   1.54354e-04  -9.82808e-04
+   4  p3           4.86614e+00   1.38700e-01   1.17082e-03  -1.43584e-04
                                ERR DEF= 0.5
-Area_tot_psa_sep = 317
-Area_psa_sep = 53
+Area_tot_psa_sep = 312
+Area_psa_sep = 51
 Calculation of survival fraction for 2614.5
 Initialization of bkg_2615 = 3
  FCN=195.792 FROM MIGRAD    STATUS=CONVERGED     229 CALLS         230 TOTAL
@@ -334,16 +334,16 @@ Initialization of bkg_2615 = 3
                                ERR DEF= 0.5
 Area_tot_fep = 7242
 Area_fep = 7169
- FCN=147.071 FROM MIGRAD    STATUS=CONVERGED     405 CALLS         406 TOTAL
-                     EDM=9.00173e-08    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   1.5 per cent
+ FCN=147.296 FROM MIGRAD    STATUS=CONVERGED     336 CALLS         337 TOTAL
+                     EDM=1.25051e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
   EXT PARAMETER                                   STEP         FIRST   
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
-   1  p0           9.56247e+01   3.81561e+00   8.64522e-03  -6.11897e-05
-   2  p1           2.61475e+03   3.77385e-02   1.09435e-04   6.36357e-03
-   3  p2           1.14152e+00   2.72920e-02  -6.70535e-06  -1.27197e-01
-   4  p3           7.67989e-03   5.37407e-03   1.23393e-05  -2.93914e-02
+   1  p0           9.31706e+01   3.84942e+00   2.63275e-02  -5.94833e-05
+   2  p1           2.61473e+03   3.90186e-02   1.24680e-03  -3.09731e-03
+   3  p2           1.14604e+00   2.80143e-02   1.79984e-05   2.82849e-01
+   4  p3           7.67898e-03   5.42840e-03   4.58498e-05  -1.18911e-01
                                ERR DEF= 0.5
-Area_tot_psa_fep = 926
-Area_psa_fep = 926
+Area_tot_psa_fep = 906
+Area_psa_fep = 906
 Calculation of survival fraction background at 2039
-Area_tot_psa = 4.66749
+Area_tot_psa = 1197
