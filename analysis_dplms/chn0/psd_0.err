@@ -1,0 +1,34 @@
+id: impossibile trovare il nome del gruppo con id 238
+-bash: /users/d/dandrea/.bash_profile: Permesso negato
+Error in <TGClient::TGClient>: can't open display "localhost:13.0", switching to batch mode...
+ In case you run from a remote ssh session, reconnect with ssh -Y
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_spectrum.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_DEP_FEP.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_AoE_all.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_AoE_onlyDEP.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_PSA_DEP_FEP.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_AoE_fits.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_AoE_vs_E.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_PSA_peak2104.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_PSA_peak2614.5.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_PSA_bkg2039.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_AoE.pdf has been created
