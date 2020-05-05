@@ -1,7 +1,4 @@
-id: impossibile trovare il nome del gruppo con id 238
 -bash: /users/d/dandrea/.bash_profile: Permesso negato
-Error in <TGClient::TGClient>: can't open display "localhost:13.0", switching to batch mode...
- In case you run from a remote ssh session, reconnect with ssh -Y
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_spectrum.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_DEP_FEP.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_dplms/chn0/chn0_AoE_all.pdf has been created

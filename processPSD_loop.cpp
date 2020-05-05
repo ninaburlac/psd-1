@@ -981,9 +981,9 @@ int main( int argc, char* argv[]){
   //----------------AoE Print------------
   c1->cd();
   gStyle->SetOptStat(0);
-  h_AoE->Draw();
-  h_AoE->SetLineColor(4);
-  h_AoE->SetLineWidth(2);
+  hAoE->Draw();
+  hAoE->SetLineColor(4);
+  hAoE->SetLineWidth(2);
   h_sep->Draw("same");
   h_sep->SetLineColor(1);
   h_sep->SetLineWidth(2);
