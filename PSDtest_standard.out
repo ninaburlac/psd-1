@@ -1,4 +1,93 @@
-4631610.xmaster.lngs.infn.it
+4633058.xmaster.lngs.infn.it
 qsub -N psd_0 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn0 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn0/psd_0.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn0/psd_0.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn0/script_chn0.sh
+4633060.xmaster.lngs.infn.it
+qsub -N psd_1 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn1 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn1/psd_1.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn1/psd_1.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn1/script_chn1.sh
+4633062.xmaster.lngs.infn.it
+qsub -N psd_2 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn2 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn2/psd_2.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn2/psd_2.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn2/script_chn2.sh
+4633064.xmaster.lngs.infn.it
+qsub -N psd_3 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn3 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn3/psd_3.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn3/psd_3.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn3/script_chn3.sh
+4633066.xmaster.lngs.infn.it
+qsub -N psd_4 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn4 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn4/psd_4.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn4/psd_4.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn4/script_chn4.sh
+4633068.xmaster.lngs.infn.it
+qsub -N psd_5 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn5 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn5/psd_5.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn5/psd_5.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn5/script_chn5.sh
+4633071.xmaster.lngs.infn.it
+qsub -N psd_6 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn6 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn6/psd_6.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn6/psd_6.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn6/script_chn6.sh
+4633073.xmaster.lngs.infn.it
+qsub -N psd_7 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn7 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn7/psd_7.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn7/psd_7.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn7/script_chn7.sh
+4633075.xmaster.lngs.infn.it
+qsub -N psd_8 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn8 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn8/psd_8.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn8/psd_8.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn8/script_chn8.sh
+4633077.xmaster.lngs.infn.it
+qsub -N psd_9 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn9 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn9/psd_9.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn9/psd_9.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn9/script_chn9.sh
+4633079.xmaster.lngs.infn.it
+qsub -N psd_10 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn10 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn10/psd_10.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn10/psd_10.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn10/script_chn10.sh
+4633081.xmaster.lngs.infn.it
+qsub -N psd_11 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn11 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn11/psd_11.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn11/psd_11.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn11/script_chn11.sh
+4633082.xmaster.lngs.infn.it
+qsub -N psd_12 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn12 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn12/psd_12.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn12/psd_12.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn12/script_chn12.sh
+4633084.xmaster.lngs.infn.it
+qsub -N psd_13 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn13 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn13/psd_13.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn13/psd_13.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn13/script_chn13.sh
+4633086.xmaster.lngs.infn.it
+qsub -N psd_14 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn14 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn14/psd_14.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn14/psd_14.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn14/script_chn14.sh
+4633088.xmaster.lngs.infn.it
+qsub -N psd_15 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn15 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn15/psd_15.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn15/psd_15.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn15/script_chn15.sh
+4633090.xmaster.lngs.infn.it
+qsub -N psd_16 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn16 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn16/psd_16.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn16/psd_16.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn16/script_chn16.sh
+4633092.xmaster.lngs.infn.it
+qsub -N psd_17 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn17 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn17/psd_17.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn17/psd_17.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn17/script_chn17.sh
+4633094.xmaster.lngs.infn.it
+qsub -N psd_18 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn18 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn18/psd_18.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn18/psd_18.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn18/script_chn18.sh
+4633096.xmaster.lngs.infn.it
+qsub -N psd_19 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn19 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn19/psd_19.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn19/psd_19.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn19/script_chn19.sh
+4633098.xmaster.lngs.infn.it
+qsub -N psd_20 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn20 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn20/psd_20.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn20/psd_20.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn20/script_chn20.sh
+4633099.xmaster.lngs.infn.it
+qsub -N psd_21 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn21 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn21/psd_21.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn21/psd_21.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn21/script_chn21.sh
+4633101.xmaster.lngs.infn.it
+qsub -N psd_22 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn22 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn22/psd_22.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn22/psd_22.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn22/script_chn22.sh
+4633103.xmaster.lngs.infn.it
+qsub -N psd_23 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn23 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn23/psd_23.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn23/psd_23.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn23/script_chn23.sh
+4633106.xmaster.lngs.infn.it
+qsub -N psd_24 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn24 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn24/psd_24.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn24/psd_24.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn24/script_chn24.sh
+4633108.xmaster.lngs.infn.it
+qsub -N psd_25 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn25 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn25/psd_25.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn25/psd_25.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn25/script_chn25.sh
+4633110.xmaster.lngs.infn.it
+qsub -N psd_26 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn26 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn26/psd_26.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn26/psd_26.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn26/script_chn26.sh
+4633111.xmaster.lngs.infn.it
+qsub -N psd_27 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn27 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn27/psd_27.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn27/psd_27.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn27/script_chn27.sh
+4633113.xmaster.lngs.infn.it
+qsub -N psd_28 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn28 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn28/psd_28.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn28/psd_28.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn28/script_chn28.sh
+4633115.xmaster.lngs.infn.it
+qsub -N psd_29 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn29 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn29/psd_29.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn29/psd_29.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn29/script_chn29.sh
+4633117.xmaster.lngs.infn.it
+qsub -N psd_30 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn30 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn30/psd_30.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn30/psd_30.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn30/script_chn30.sh
+4633119.xmaster.lngs.infn.it
+qsub -N psd_31 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn31 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn31/psd_31.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn31/psd_31.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn31/script_chn31.sh
+4633121.xmaster.lngs.infn.it
+qsub -N psd_32 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn32 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn32/psd_32.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn32/psd_32.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn32/script_chn32.sh
+4633123.xmaster.lngs.infn.it
+qsub -N psd_33 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn33 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn33/psd_33.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn33/psd_33.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn33/script_chn33.sh
+4633125.xmaster.lngs.infn.it
+qsub -N psd_34 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn34 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn34/psd_34.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn34/psd_34.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn34/script_chn34.sh
+4633127.xmaster.lngs.infn.it
+qsub -N psd_35 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn35 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn35/psd_35.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn35/psd_35.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn35/script_chn35.sh
+4633129.xmaster.lngs.infn.it
+qsub -N psd_36 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn36 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn36/psd_36.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn36/psd_36.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn36/script_chn36.sh
+4633131.xmaster.lngs.infn.it
+qsub -N psd_37 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn37 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn37/psd_37.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn37/psd_37.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn37/script_chn37.sh
+4633133.xmaster.lngs.infn.it
+qsub -N psd_38 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn38 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn38/psd_38.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn38/psd_38.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn38/script_chn38.sh
+4633135.xmaster.lngs.infn.it
+qsub -N psd_39 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn39 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn39/psd_39.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn39/psd_39.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn39/script_chn39.sh
+4633137.xmaster.lngs.infn.it
+qsub -N psd_40 -q gerda -V -d /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn40 -m abe -e localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn40/psd_40.err -o localhost:/nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn40/psd_40.out -l mem=4000mb /nfs/gerda6/users/dandrea/Analysis/PSD/analysis_standard/chn40/script_chn40.sh
 qstat -u dandrea |  grep psd | wc -l 
+82
+82
+76
+66
+64
+36
+14
+5
+3
 0
