@@ -33,10 +33,8 @@
 using namespace std;
 
 vector<double> AoE_corr(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe );
-
-TH1D *calculateSF(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double n_sigma, double AoE_lowCut, double AoE_highCut, vector<double> b, double peak, char *out_file);
-
-TH1D *calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, double AoE_highCut, vector<double> b, double qbb, char *out_file);
+vector<double> calculateSF(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double n_sigma, double AoE_lowCut, double AoE_highCut, vector<double> b, double peak);
+vector<double> calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, double AoE_highCut, vector<double> b, double qbb);
 
 int main( int argc, char* argv[]){
   //TApplication * myapp = new TApplication("myapp",0,0);
@@ -74,7 +72,7 @@ int main( int argc, char* argv[]){
   cout << "Total events = " << nEntries << endl;
   clock_t begin, now, time;
   begin = clock();
-  //for ( int iEntry = 0; iEntry < 5000000;iEntry++){
+  //for ( int iEntry = 0; iEntry < 1000000;iEntry++){
   for ( int iEntry = 0; iEntry < nEntries; iEntry++ ) {
     if ((iEntry+1) % 1000000 == 0) cout << "event n." << iEntry+1 << endl;
     tier->GetEntry(iEntry);
@@ -453,26 +451,42 @@ int main( int argc, char* argv[]){
   leg->Draw();
   c2->Update();
   c2->Print(Form("%s/chn%d_PSA_DEP_FEP.pdf",resdir,chn));
-  
-  //-------- Save results in file --------
-  std::ofstream fileres;
-  char *out_file = Form("%s/PSA_results.txt",resdir);
-  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f ",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100);
-  fileres.open(out_file);
-  fileres << out_results;
-  fileres.close();
-  
+    
   //---------- AoE correction ---------
   
   vector<double> b = AoE_corr( chn, resdir, energies, AoEs, mean_aoe);
   
   //---------- Calculation of Survival Fractions ----------
   
-  TH1D *h_2104 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, AoE_highCut, b, 2104, out_file);
-  TH1D *h_2614 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, AoE_highCut, b, 2614.5, out_file);
-  TH1D *h_qbb = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, AoE_highCut, b, 2039, out_file);
+  vector<double> SF_2104 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, AoE_highCut, b, 2104);
+  vector<double> SF_2614 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, AoE_highCut, b, 2614.5);
+  vector<double> SF_qbb = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, AoE_highCut, b, 2039);
+  
+  //-------- Save results in file --------
+  std::ofstream fileres;
+  char *out_file = Form("%s/PSA_results.txt",resdir);
+  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100, SF_2104.at(0), SF_2104.at(1), SF_2614.at(0), SF_2614.at(1), SF_qbb.at(0), SF_qbb.at(1));
+  fileres.open(out_file);
+  fileres << out_results;
+  fileres.close();    
   
   //----------------AoE Print------------
+
+  TH1D *h_2104 = new TH1D("h_2104","", 100, 0.7, 1.1);
+  TH1D *h_2614 = new TH1D("h_2614","", 100, 0.7, 1.1);
+  TH1D *h_qbb = new TH1D("h_qbb","", 100, 0.7, 1.1);
+  for ( int i = 0; i < events; i++){
+    double AoEnorm = AoEs.at(i)/mean_aoe;
+    if ( (energies.at(i)<=SF_2104.at(2)+n_sigma*SF_2104.at(3)) && (energies.at(i)>=SF_2104.at(2)-n_sigma*SF_2104.at(3)) )
+      h_2104->Fill(AoEnorm);
+    if ( (energies.at(i)<=SF_2614.at(2)+n_sigma*SF_2614.at(3)) && (energies.at(i)>=SF_2614.at(2)-n_sigma*SF_2614.at(3)) )
+      h_2614->Fill(AoEnorm);
+    if ( energies.at(i)<=2074 && energies.at(i)>=2004 )
+      h_qbb->Fill(AoEnorm);
+  }
+  h_2104->Scale(1./h_2104->GetBinContent(h_2104->GetMaximumBin()));
+  h_2614->Scale(1./h_2614->GetBinContent(h_2614->GetMaximumBin()));
+  h_qbb->Scale(1./h_qbb->GetBinContent(h_qbb->GetMaximumBin()));
   
   c1->cd();
   gStyle->SetOptStat(0);
@@ -488,7 +502,6 @@ int main( int argc, char* argv[]){
   h_qbb->Draw("same");
   h_qbb->SetLineColor(2);
   h_qbb->SetLineWidth(2);
-  
   c1->Update();
   TLegend *leg_p = new TLegend(0.1,0.7,0.3,0.9,"","NDC");
   leg_p->AddEntry(hAoE,"DEP","l");
@@ -498,12 +511,9 @@ int main( int argc, char* argv[]){
   leg_p->Draw();
   c1->Update();
   c1->Print(Form("%s/chn%d_AoE.pdf",resdir,chn));
-  
   //myapp->Run();
   return 0;
 }
-
-
 
 
 vector<double> AoE_corr(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe ){
@@ -651,7 +661,7 @@ vector<double> AoE_corr(int chn, char* resdir, vector<double> energies, vector<d
 
 
 
-TH1D *calculateSF(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double n_sigma, double AoE_lowCut, double AoE_highCut, vector<double> b, double peak, char* out_file){
+vector<double> calculateSF(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double n_sigma, double AoE_lowCut, double AoE_highCut, vector<double> b, double peak){
   int events = energies.size();
   cout << "Calculation of survival fraction for " << peak << endl;
   
@@ -702,13 +712,6 @@ TH1D *calculateSF(int chn, char* resdir, vector<double> energies, vector<double>
   double sigma_ = f_gaus->GetParameter(2);
   double bkg = f_gaus->GetParameter(3);
 
-  //---- A/E----    
-  TH1D *hAoE = new TH1D("hAoE","", 100, 0.7, 1.1);
-  for ( int i = 0; i < events; i++){
-    double AoEnorm = AoEs.at(i)/mean_aoe;
-    if ( energies.at(i) <= mu_ + n_sigma*sigma_ &&  energies.at(i) >= mu_ - n_sigma*sigma_ ) hAoE->Fill(AoEnorm);
-  }
-  hAoE->Scale(1./hAoE->GetBinContent(hAoE->GetMaximumBin()));
   
   //------------ calculation of Area of peak ---------
   int min_bin = hene->GetXaxis()->FindBin(mu_ - n_sigma * sigma_);
@@ -784,19 +787,15 @@ TH1D *calculateSF(int chn, char* resdir, vector<double> energies, vector<double>
   c_4->Update();
   c_4->Print(Form("%s/chn%d_PSA_peak%g.pdf",resdir,chn,peak));
   
-  std::ofstream fileres;
-  fileres.open(out_file,std::ios_base::app|std::ios_base::out);
-  if (fileres.fail()) cout << "Out file error" << endl; 
-  char *out_results = Form(" %4.2f %4.2f ",Acc*100, Acc_e*100);
-  fileres << out_results;
-  cout << out_results;
-  fileres.close();
-  return hAoE;
+  vector<double> survivalFraction;
+  survivalFraction.push_back(Acc*100);
+  survivalFraction.push_back(Acc_e*100);
+  survivalFraction.push_back(mu_);
+  survivalFraction.push_back(sigma_);
+  return survivalFraction;
 }
 
-
-
-TH1D *calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, double AoE_highCut, vector<double> b, double qbb, char *out_file){
+vector<double> calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, double AoE_highCut, vector<double> b, double qbb){
   cout << "Calculation of survival fraction background at " << qbb << endl;
   int events = energies.size();
   double min = (qbb - 35);
@@ -814,14 +813,6 @@ TH1D *calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<dou
     }
   }
   
-  //----------- A/E -----------
-  TH1D *h_bkg = new TH1D("h_bkg","", 100, 0.7, 1.1);
-  for ( int i = 0; i < events; i++){
-    double AoEnorm = AoEs.at(i)/mean_aoe;
-    if ( energies.at(i) <= max && energies.at(i) >= min ) h_bkg->Fill(AoEnorm);
-  }
-  h_bkg->Scale(1./h_bkg->GetBinContent(h_bkg->GetMaximumBin()));
-    
   TCanvas *c_4 = new TCanvas("c_4","energy");
   c_4->cd();
   hene->Draw();
@@ -864,12 +855,8 @@ TH1D *calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<dou
   c_4->Update();
   c_4->Print(Form("%s/chn%d_PSA_bkg2039.pdf",resdir,chn));
   
-  std::ofstream fileres;
-  fileres.open(out_file,std::ios_base::app|std::ios_base::out);
-  if (fileres.fail()) cout << "Out file error" << endl;   
-  char *out_results = Form(" %4.2f %4.2f \n",SF_bkg*100, SF_bkg_err*100);
-  fileres << out_results;
-  cout << out_results;
-  fileres.close();
-  return h_bkg;
+  vector<double> survivalFraction;
+  survivalFraction.push_back(SF_bkg*100);
+  survivalFraction.push_back(SF_bkg_err*100);
+  return survivalFraction;
 }
