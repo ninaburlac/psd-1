@@ -36,7 +36,7 @@ FFTWFLAGS     =  -lfftw3
 
 PROGRAM       = processPSD 
 
-SRCS          = processPSD_loop.cpp
+SRCS          = processPSD_v4.cpp
 
 OBJ           = $(patsubst %.cc, %.o, $(SRCS)) 
 
