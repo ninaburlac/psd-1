@@ -25,7 +25,7 @@ event n.15000000
 event n.16000000
 event n.17000000
 Selected events: 107733
-The time to read waveforms: 33.93 s
+The time to read waveforms: 40.61 s
 Initialization of DEP&FEP background  = 13.5
  FCN=130.865 FROM MIGRAD    STATUS=CONVERGED     230 CALLS         231 TOTAL
                      EDM=5.4823e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 

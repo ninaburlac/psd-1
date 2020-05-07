@@ -36,7 +36,11 @@ int main( int argc, char* argv[]){
   double cycle = 6.00;
   if (argc>2) cycle = atof(argv[2]);
   int run = 98;
-  //if (argc>3) run = atoi(argv[3]);
+  if (argc>3) run = atoi(argv[3]);
+  int weight = 10;
+  if (argc>4) weight = atoi(argv[4]);
+  
+  cout << "Read files from run " << run << " with weight " << weight << endl;
   
   //char *filelist = Form("/nfs/gerda5/gerda-data/blind/v0%3.2f/meta/data-sets/cal/run0095-run0114-cal-analysis.txt",cycle);
   char *filelist = Form("/nfs/gerda5/gerda-data/blind/v0%3.2f/meta/data-sets/cal/run00%d-cal-analysis.txt", cycle, run);
@@ -47,8 +51,12 @@ int main( int argc, char* argv[]){
   
   const int nChn = 41;
   
-  TFile *newfile = new TFile(Form("%s/run00%d-cal_dplms.tier.root",resdir,run),"RECREATE");
+  char *filename = Form("%s/run00%d-cal_dplms_%d.tier.root", resdir, run, weight);
+  cout << "Writing on file " << filename << endl;
+  
+  TFile *newfile = new TFile(filename,"RECREATE");
   //TFile *newfile = new TFile(Form("%s/run0095-run0114-cal.tier.root",resdir),"RECREATE");
+  
   TTree *tier = new TTree("tier","Tree with energy and AoE");
   ULong64_t tempo;
   tier->Branch("tempo", &tempo);
@@ -78,7 +86,7 @@ int main( int argc, char* argv[]){
     
     //char *tier2file = Form("/nfs/gerda5/gerda-data/blind/v0%3.2f/gen/tier2/ged/cal/%s/%s-ged-tier2.root", cycle, trun, line);
     
-    char *tier2file = Form("/nfs/gerda6/users/dandrea/Analysis/createPSDfilter/%s/tier2/%s-ged-tier2.root", trun, line);
+    char *tier2file = Form("/nfs/gerda6/users/dandrea/Analysis/createPSDfilter/%s/tier2/weight_%d/%s-ged-tier2.root", trun, weight, line);
     char *tier3file = Form("/nfs/gerda5/gerda-data/blind/v0%3.2f/gen/tier3/all/cal/%s/%s-all-tier3.root", cycle, trun, line);
     cout << "Using file: " << tier2file << endl;
     cout << "Using file: " << tier3file << endl;
@@ -91,7 +99,7 @@ int main( int argc, char* argv[]){
     
     //tier3
     std::vector<double>* energycal = NULL;    
-    tier3->SetBranchAddress("energy", &energycal);    
+    tier3->SetBranchAddress("energy", &energycal);
     //std::vector<double>* AsuE = NULL;    
     //tier3->SetBranchAddress("AoE", &AsuE);    
     std::vector<int>* failedFlag = NULL;

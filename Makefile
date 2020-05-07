@@ -45,18 +45,24 @@ obj           = $(addprefix ./,$(OBJ))
 prg           = $(addprefix ./,$(PROGRAM))
 
 
-#PROGRAMII       = readTier 
-#SRCSII	      = readTier.cpp 
-#OBJII           = $(patsubst %.cc, %.o, $(SRCSII)) 
-#srcII           = $(addprefix ./,$(SRCSII))
-#objII           = $(addprefix ./,$(OBJII))
-#prgII           = $(addprefix ./,$(PROGRAMII))
+PROGRAMII       = readTier 
+SRCSII	      = readTier.cpp 
+OBJII           = $(patsubst %.cc, %.o, $(SRCSII)) 
+srcII           = $(addprefix ./,$(SRCSII))
+objII           = $(addprefix ./,$(OBJII))
+prgII           = $(addprefix ./,$(PROGRAMII))
+
+PROGRAMIII       = plotSF_AoE
+SRCSIII	      = plotSF_AoE.cpp 
+OBJIII           = $(patsubst %.cc, %.o, $(SRCSIII)) 
+srcIII           = $(addprefix ./,$(SRCSIII))
+objIII           = $(addprefix ./,$(OBJIII))
+prgIII           = $(addprefix ./,$(PROGRAMIII))
 
 # -----------------------------------------------------------------------------
 
 
-#all:: $(prg) $(prgII) $(con)
-all:: $(prg) $(con)
+all:: $(prg) $(prgII) $(prgIII) $(con)
 
 $(con): $(objc) 
 	$(CXX) -o $@ $^ $(LDFLAGS)  $(FFTWFLAGS) $(FFTWLIBS)
@@ -86,7 +92,8 @@ $(prg):$(obj)
 clean::
 	rm -f $(con)
 	rm -f $(prg)	
-#	rm -f $(prgII)	
+	rm -f $(prgII)	
+	rm -f $(prgIII)	
 
 # -----------------------------------------------------------------------------
 

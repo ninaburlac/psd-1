@@ -458,7 +458,7 @@ int main( int argc, char* argv[]){
   //-------- Save results in file --------
   std::ofstream fileres;
   char *out_file = Form("%s/PSA_results.txt",resdir);
-  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100, SF_2104.at(0), SF_2104.at(1), SF_2614.at(0), SF_2614.at(1), SF_qbb.at(0), SF_qbb.at(1));
+  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f\n",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100, SF_2104.at(0), SF_2104.at(1), SF_2614.at(0), SF_2614.at(1), SF_qbb.at(0), SF_qbb.at(1));
   fileres.open(out_file);
   fileres << out_results;
   fileres.close();    

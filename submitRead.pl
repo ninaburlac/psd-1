@@ -17,6 +17,7 @@ my $localdir = $ENV{PWD};
 
 my $cycle = $ARGV[0];
 my $run = $ARGV[1];
+my $weight = $ARGV[2];
 
 my $myUser = $ENV{'USER'};
 
@@ -24,7 +25,8 @@ my $myUser = $ENV{'USER'};
 my $old_umask = umask;
 umask 0000;
 
-my $resdir = $localdir . "/analysis";
+#my $resdir = $localdir . "/analysis";
+my $resdir = "/nfs/gerda6/users/burlac/psd/analysis";
 mkdir "$resdir", 0770 unless -d "$resdir";
 
 my @cmd = ( "!readcommand!");
@@ -33,7 +35,7 @@ my @cmd = ( "!readcommand!");
 my $readprogram = $localdir . "/readTier";
 my $readout = $resdir . "/read.out";
 #my $readcommand = $readprogram . " " . $resdir . " " . $cycle . " " . $run . " > " . $readout; 
-my $readcommand = $readprogram . " " . $resdir . " " . $cycle . " > " . $readout; 
+my $readcommand = $readprogram . " " . $resdir . " " . $cycle . " " . $run . " " . $weight . " > " . $readout; 
 
 ### submit noise script
 my $scripttobecopied = $localdir . "/scriptread.template.sh";
@@ -73,7 +75,7 @@ while ($inQueuer) {
 	umask $old_umask;
 	
 	my $from = 'psdtest';
-	my $to = 'ninaburlac.nb\@gmail.com';
+	my $to = 'ninaburlac.nb\@gmail.com','valerio.dandrea@lngs.infn.it';
 	my $subject = "read root files";
 	#my $fwhmFile = $scandir . "/FWHM_chn" . $chn . ".txt";
 	my $body = "Hi, \n this is an automatic message from the test of the PSD";

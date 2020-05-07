@@ -65,7 +65,9 @@ for(my $chn = $firstchn; $chn < $lastchn; $chn++){
     ### submit PSD job to queue
     my $scriptlog = $thisdir . "/psd_" . $chn . ".out";
     my $scripterr = $thisdir . "/psd_" . $chn . ".err";
-    my $jobName = "psd_" . $chn;
+    my $jobName;
+    if ( $dplms ) {$jobName = "pd_" . $chn;}
+    else {$jobName = "ps_" . $chn;}
     
     my $QUEUEcmd = "qsub -N " . $jobName . " -q gerda -V -d " . $thisdir . " -m abe -e localhost:". $scripterr . " -o localhost:" . $scriptlog . " -l mem=4000mb " . $currscript;
     system($QUEUEcmd);
@@ -73,7 +75,10 @@ for(my $chn = $firstchn; $chn < $lastchn; $chn++){
     
 }
 
-my $countJob = "qstat -u " . $myUser . " |  grep psd | wc -l ";
+my $countJob;
+if ( $dplms ) { $countJob = "qstat -u " . $myUser . " |  grep pd_ | wc -l ";}
+else { $countJob = "qstat -u " . $myUser . " |  grep ps_ | wc -l ";}
+
 print $countJob . "\n";
 my $inQueue = 1;
 
@@ -83,6 +88,26 @@ while ($inQueue) {
     print $actualJob;
     if($actualJob==0) {
 	$inQueue=0;
+	
+	my $resultsfile;
+	if ( $dplms ) { $resultsfile = $resdir . "/PSA_results_dplms.txt";}
+	else { $resultsfile = $resdir . "/PSA_results_stand.txt";}
+	my $catCmd = "cat ";
+	for(my $chn = $firstchn; $chn < $lastchn; $chn++){
+	    if ( $chn == 8 || $chn == 9 || $chn == 10 || $chn == 27 || $chn == 28 || $chn == 29 ) {next;}
+	    my $chnfile = $resdir . "/chn" . $chn . "/PSA_results.txt";
+	    if (-e $chnfile){$catCmd = $catCmd . $chnfile . " ";}
+	}
+	$catCmd = $catCmd . " > " . $resultsfile;
+	print $catCmd;
+	system($catCmd);
+	
+	my $text;
+	if ( $dplms ) { $text = "DPLMS";}
+	else { $text = "standard";}
+	my $plotcmd = $localdir . "/plotSF_AoE " . $resultsfile . " " . $resdir . " " . $text . " > " . $resdir . "/plot.out"; 
+	print $plotcmd;
+	system($plotcmd);
 	
         # Reset umask to old value
 	umask $old_umask;
