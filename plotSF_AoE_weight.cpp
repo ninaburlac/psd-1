@@ -200,7 +200,7 @@ int main( int argc, char* argv[]){
   g_bkg->SetMarkerStyle(20);
 
   //c1->cd(4);
-  g_sep->SetTitle("");
+  g_sep->SetTitle(Form("chn[%d]",chn));
   g_sep->GetXaxis()->SetTitle("Weight");
   g_sep->GetYaxis()->SetTitle("Survival Fraction [%]");
   g_sep->Draw("AP");
@@ -211,7 +211,7 @@ int main( int argc, char* argv[]){
   c1->Print(Form("%s/SF_SEP_chn%d.pdf",resdir,chn));
   
   //c1->cd(5);
-  g_fep->SetTitle("");
+  g_fep->SetTitle(Form("chn[%d]",chn));
   g_fep->GetXaxis()->SetTitle("Weight");
   g_fep->GetYaxis()->SetTitle("Survival Fraction [%]");
   g_fep->Draw("AP");
@@ -222,7 +222,7 @@ int main( int argc, char* argv[]){
   c1->Print(Form("%s/SF_FEP_chn%d.pdf",resdir,chn));
     
   //c1->cd(6);
-  g_2614->SetTitle("");
+  g_2614->SetTitle(Form("chn[%d]",chn));
   g_2614->GetXaxis()->SetTitle("Weight");
   g_2614->GetYaxis()->SetTitle("Survival Fraction [%]");
   g_2614->Draw("AP");
@@ -247,7 +247,7 @@ int main( int argc, char* argv[]){
   //c1->cd(3);
   g_bkg->GetXaxis()->SetTitle("Weight");
   g_bkg->GetYaxis()->SetTitle("Survival Fraction [%]");
-  g_bkg->SetTitle("");
+  g_bkg->SetTitle(Form("chn[%d]",chn));
   g_bkg->Draw("AP");
   gPad->SetLogx();
   leg3->Draw("same");
