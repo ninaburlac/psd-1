@@ -99,7 +99,7 @@ int main( int argc, char* argv[]){
   cout << "n. weight " << n_lines << endl;
 
   TCanvas *c1 = new TCanvas("c","cii",1000, 600);
-  c1->Divide(2,3);
+  //c1->Divide(2,3);
 
   TLine *lin1 = new TLine(weight[0], AoE_ref,     weight[n_lines-1], AoE_ref);
   TLine *lin2 = new TLine(weight[0], SF_dep_ref,  weight[n_lines-1], SF_dep_ref);
@@ -199,7 +199,7 @@ int main( int argc, char* argv[]){
   g_2614->SetMarkerStyle(20);
   g_bkg->SetMarkerStyle(20);
 
-  c1->cd(4);
+  //c1->cd(4);
   g_sep->SetTitle("");
   g_sep->GetXaxis()->SetTitle("Weight");
   g_sep->GetYaxis()->SetTitle("Survival Fraction [%]");
@@ -208,8 +208,9 @@ int main( int argc, char* argv[]){
   leg4->Draw();
   lin4->Draw();
   c1->Update();
-
-  c1->cd(5);
+  c1->Print(Form("%s/SF_FWHM_SEP_chn%d.pdf",resdir,chn));
+  
+  //c1->cd(5);
   g_fep->SetTitle("");
   g_fep->GetXaxis()->SetTitle("Weight");
   g_fep->GetYaxis()->SetTitle("Survival Fraction [%]");
@@ -218,8 +219,9 @@ int main( int argc, char* argv[]){
   leg5->Draw("same");
   lin5->Draw();
   c1->Update();
-
-  c1->cd(6);
+  c1->Print(Form("%s/SF_FWHM_DEP_chn%d.pdf",resdir,chn));
+    
+  //c1->cd(6);
   g_2614->SetTitle("");
   g_2614->GetXaxis()->SetTitle("Weight");
   g_2614->GetYaxis()->SetTitle("Survival Fraction [%]");
@@ -228,8 +230,9 @@ int main( int argc, char* argv[]){
   leg6->Draw("same");
   lin6->Draw();
   c1->Update();
-
-  c1->cd(2);
+  c1->Print(Form("%s/SF_FWHM_2614_chn%d.pdf",resdir,chn));
+  
+  //c1->cd(2);
   leg2->Draw("same");
   g_dep->SetTitle(Form("chn[%d]",chn));
   g_dep->GetXaxis()->SetTitle("Weight");
@@ -239,8 +242,9 @@ int main( int argc, char* argv[]){
   gPad->SetLogx();
   lin2->Draw();
   c1->Update();
-
-  c1->cd(3);
+  c1->Print(Form("%s/SF_FWHM_DEP_chn%d.pdf",resdir,chn));
+  
+  //c1->cd(3);
   g_bkg->GetXaxis()->SetTitle("Weight");
   g_bkg->GetYaxis()->SetTitle("Survival Fraction [%]");
   g_bkg->SetTitle("");
@@ -249,7 +253,8 @@ int main( int argc, char* argv[]){
   leg3->Draw("same");
   lin3->Draw();
   c1->Update();
-  c1->Print(Form("%s/SF_FWHM_chn%d.pdf",resdir,chn));
+  c1->Print(Form("%s/SF_FWHM_bkg_chn%d.pdf",resdir,chn));
+  //c1->Print(Form("%s/SF_FWHM_chn%d.pdf",resdir,chn));
   
   // SAVE ON ROOT FILE
   TFile *out = new TFile(Form("%s/PlotSF_chn%d.root",resdir,chn),"RECREATE"); 
