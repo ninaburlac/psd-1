@@ -144,13 +144,13 @@ int main( int argc, char* argv[]){
   g_1->SetLineWidth(2);
   g_1->SetMarkerStyle(20);
 
-  c1->cd(1);
+  //c1->cd(1);
   gPad->SetLogx();
   g_1->Draw("AP");
   leg1->Draw("same");
   lin1->Draw("same");
   c1->Update();
-
+  c1->Print(Form("%s/FWHM_AoE_chn%d.pdf",resdir,chn));
 
   //TMultiGraph *mg = new TMultiGraph();
   TGraph *g_dep = new TGraphErrors(n_lines,weight, SF_dep, 0, SF_dep_err);
@@ -208,7 +208,7 @@ int main( int argc, char* argv[]){
   leg4->Draw();
   lin4->Draw();
   c1->Update();
-  c1->Print(Form("%s/SF_FWHM_SEP_chn%d.pdf",resdir,chn));
+  c1->Print(Form("%s/SF_SEP_chn%d.pdf",resdir,chn));
   
   //c1->cd(5);
   g_fep->SetTitle("");
@@ -219,7 +219,7 @@ int main( int argc, char* argv[]){
   leg5->Draw("same");
   lin5->Draw();
   c1->Update();
-  c1->Print(Form("%s/SF_FWHM_DEP_chn%d.pdf",resdir,chn));
+  c1->Print(Form("%s/SF_DEP_chn%d.pdf",resdir,chn));
     
   //c1->cd(6);
   g_2614->SetTitle("");
@@ -230,7 +230,7 @@ int main( int argc, char* argv[]){
   leg6->Draw("same");
   lin6->Draw();
   c1->Update();
-  c1->Print(Form("%s/SF_FWHM_2614_chn%d.pdf",resdir,chn));
+  c1->Print(Form("%s/SF_2614_chn%d.pdf",resdir,chn));
   
   //c1->cd(2);
   leg2->Draw("same");
@@ -242,7 +242,7 @@ int main( int argc, char* argv[]){
   gPad->SetLogx();
   lin2->Draw();
   c1->Update();
-  c1->Print(Form("%s/SF_FWHM_DEP_chn%d.pdf",resdir,chn));
+  c1->Print(Form("%s/SF_DEP_chn%d.pdf",resdir,chn));
   
   //c1->cd(3);
   g_bkg->GetXaxis()->SetTitle("Weight");
@@ -253,13 +253,18 @@ int main( int argc, char* argv[]){
   leg3->Draw("same");
   lin3->Draw();
   c1->Update();
-  c1->Print(Form("%s/SF_FWHM_bkg_chn%d.pdf",resdir,chn));
+  c1->Print(Form("%s/SF_bkg_chn%d.pdf",resdir,chn));
   //c1->Print(Form("%s/SF_FWHM_chn%d.pdf",resdir,chn));
   
   // SAVE ON ROOT FILE
   TFile *out = new TFile(Form("%s/PlotSF_chn%d.root",resdir,chn),"RECREATE"); 
   out->cd();
-  c1->Write();
+  g_1->Write();
+  g_dep->Write();
+  g_fep->Write();
+  g_sep->Write();
+  g_bkg->Write();
+  g_2614->Write();
   out->Close();
   
   //myapp->Run();
