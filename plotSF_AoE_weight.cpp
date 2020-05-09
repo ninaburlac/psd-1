@@ -219,7 +219,7 @@ int main( int argc, char* argv[]){
   leg5->Draw("same");
   lin5->Draw();
   c1->Update();
-  c1->Print(Form("%s/SF_DEP_chn%d.pdf",resdir,chn));
+  c1->Print(Form("%s/SF_FEP_chn%d.pdf",resdir,chn));
     
   //c1->cd(6);
   g_2614->SetTitle("");
