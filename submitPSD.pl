@@ -23,6 +23,8 @@ my $lastchn = $firstchn + $nchn;
 my $tierfile = $ARGV[2];
 my $dplms = 0;
 if ( $len > 3 ) { $dplms = $ARGV[3];}
+my $weight = 0;
+if ( $len > 4 ) { $weight = $ARGV[4];}
 
 my $myUser = $ENV{'USER'};
 
@@ -31,7 +33,7 @@ my $old_umask = umask;
 umask 0000;
 
 my $resdir;
-if ( $dplms ) {$resdir = $localdir . "/analysis_dplms";}
+if ( $dplms ) {$resdir = $localdir . "/analysis_dplms_" . $weight;}
 else { $resdir = $localdir . "/analysis_standard";}
 mkdir "$resdir", 0770 unless -d "$resdir";
 
@@ -45,7 +47,7 @@ for(my $chn = $firstchn; $chn < $lastchn; $chn++){
     
     my $psdprogram = $localdir . "/processPSD";
     my $psdout = $thisdir . "/psd_chn" . $chn . ".out";
-    my $psdcommand = $psdprogram . " " . $thisdir . " " . $tierfile . " " . $chn . " " . $dplms . " > " . $psdout; 
+    my $psdcommand = $psdprogram . " " . $thisdir . " " . $tierfile . " " . $chn . " " . $dplms . " " . $weight . " > " . $psdout; 
     
     ### submit noise script
     
@@ -103,7 +105,7 @@ while ($inQueue) {
 	system($catCmd);
 	
 	my $text;
-	if ( $dplms ) { $text = "DPLMS";}
+	if ( $dplms ) { $text = "DPLMS-" . $weight;}
 	else { $text = "standard";}
 	my $plotcmd = $localdir . "/plotSF_AoE " . $resultsfile . " " . $resdir . " " . $text . " > " . $resdir . "/plot.out"; 
 	print $plotcmd;

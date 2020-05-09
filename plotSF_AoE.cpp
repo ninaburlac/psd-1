@@ -46,7 +46,7 @@ int main( int argc, char* argv[]){
   file.open(name);
   
   double x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
-  double x11, x12, x13;
+  double x11, x12, x13, x14;
   double chn[1000];
   double AoE[1000];
   double AoE_err[1000];
@@ -63,7 +63,7 @@ int main( int argc, char* argv[]){
   
   int n_lines = 0;
   while (1){
-    file >> x1 >> x2 >> x3 >> x4 >> x5 >> x6 >> x7 >> x8 >> x9 >> x10 >> x11 >> x12 >> x13;
+    file >> x1 >> x2 >> x3 >> x4 >> x5 >> x6 >> x7 >> x8 >> x9 >> x10 >> x11 >> x12 >> x13 >> x14;
     if (!file.good()) break;
     chn[n_lines] = x1;
     AoE[n_lines] = x2;

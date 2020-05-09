@@ -43,10 +43,12 @@ int main( int argc, char* argv[]){
   int chn = atoi(argv[3]);
   bool dplms = true;
   if (argc>4) dplms = atoi(argv[4]);
+  int weight = 0;
+  if (argc>5) weight = atoi(argv[5]);
   
   cout << "Using file " << tier_name << endl;
   cout << "Analizing channel " << chn << endl;
-  if (dplms) cout << "DPLMS analysis " << endl;
+  if (dplms) cout << "DPLMS analysis with weight " << weight << endl;
   else cout << "Standard analysis " << endl;
   
   TFile *tier_file = TFile::Open(tier_name);
@@ -458,7 +460,7 @@ int main( int argc, char* argv[]){
   //-------- Save results in file --------
   std::ofstream fileres;
   char *out_file = Form("%s/PSA_results.txt",resdir);
-  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f\n",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100, SF_2104.at(0), SF_2104.at(1), SF_2614.at(0), SF_2614.at(1), SF_qbb.at(0), SF_qbb.at(1));
+  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %d\n",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100, SF_2104.at(0), SF_2104.at(1), SF_2614.at(0), SF_2614.at(1), SF_qbb.at(0), SF_qbb.at(1), weight);
   fileres.open(out_file);
   fileres << out_results;
   fileres.close();    

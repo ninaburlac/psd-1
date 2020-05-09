@@ -3,7 +3,7 @@
                 Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
                 All rights reserved, please read http://roofit.sourceforge.net/license.txt
 
-Using file /nfs/gerda6/users/burlac/psd/analysis/run0098-cal_dplms.tier.root
+Using file /nfs/gerda6/users/burlac/psd/analysis/run0098-cal_dplms_10.tier.root
 Analizing channel 6
 Standard analysis 
 Total events = 17201607
@@ -25,7 +25,7 @@ event n.15000000
 event n.16000000
 event n.17000000
 Selected events: 90003
-The time to read waveforms: 49.73 s
+The time to read waveforms: 32.63 s
 Initialization of DEP&FEP background  = 11
  FCN=119.359 FROM MIGRAD    STATUS=CONVERGED     163 CALLS         164 TOTAL
                      EDM=1.70514e-07    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   4.8 per cent

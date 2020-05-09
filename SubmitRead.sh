@@ -1,2 +1,2 @@
-./submitRead.pl 6.13 98 100 >& readTest_100.out &
+./submitRead.pl 6.13 98 1000 >& readTest.out &
 

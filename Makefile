@@ -59,10 +59,18 @@ srcIII           = $(addprefix ./,$(SRCSIII))
 objIII           = $(addprefix ./,$(OBJIII))
 prgIII           = $(addprefix ./,$(PROGRAMIII))
 
+PROGRAMIV       = plotSF_AoE_weight
+SRCSIV       = plotSF_AoE_weight.cpp
+OBJIV           = $(patsubst %.cc, %.o, $(SRCSIV))
+srcIV           = $(addprefix ./,$(SRCSIV))
+objIV           = $(addprefix ./,$(OBJIV))
+prgIV           = $(addprefix ./,$(PROGRAMIV))
+
+
 # -----------------------------------------------------------------------------
 
 
-all:: $(prg) $(prgII) $(prgIII) $(con)
+all:: $(prg) $(prgII) $(prgIII) $(prgIV) $(con)
 
 $(con): $(objc) 
 	$(CXX) -o $@ $^ $(LDFLAGS)  $(FFTWFLAGS) $(FFTWLIBS)
@@ -94,6 +102,7 @@ clean::
 	rm -f $(prg)	
 	rm -f $(prgII)	
 	rm -f $(prgIII)	
+	rm -f $(prgIV)
 
 # -----------------------------------------------------------------------------
 
