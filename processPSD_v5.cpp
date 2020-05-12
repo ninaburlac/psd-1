@@ -174,7 +174,7 @@ int main( int argc, char* argv[]){
   gStyle->SetOptFit(0);
   hAoE0->Draw();
   c1->Update();
-  c1->Print(Form("%s/chn%d_AoE_all.pdf",resdir,chn));
+  c1->Print(Form("%s/chn%d_AoE.pdf",resdir,chn));
   
   double mean_aoe = hAoE0->GetBinCenter(hAoE0->GetMaximumBin());
   cout << "mean_aoe = " << mean_aoe << endl;
@@ -200,6 +200,7 @@ int main( int argc, char* argv[]){
   TH1D *h_AoE1 = new TH1D("h_AoE1",Form(";A/E;Counts",chn), nbin_cut, 0., 2.);
   TH1D *h_AoE2 = new TH1D("h_AoE2",Form(";A/E;Counts",chn), nbin_cut, 0., 2.);
   TH1D *h_AoE3 = new TH1D("h_AoE3", Form(";A/E;Counts",chn), nbin_cut, 0., 2.);
+
   for ( int i = 0; i < events;i++){
     double AoEnorm = AoEs.at(i)/mean_aoe;
     if ( (energies.at(i) >= min_dep) && (energies.at(i) <= max_dep) ) {
@@ -252,32 +253,102 @@ int main( int argc, char* argv[]){
   ////////////////////////////////////////////////////
   //---------------- PSA analysis --------------------
   ////////////////////////////////////////////////////
+
+  //------- Study of LowCut vs bin -----------
+  cout << "Study of LowCut vs bin" << endl;
+  int n_bin = 17;
+  double lowCut[n_bin];
+  double bin_lowCut[n_bin];
+  bin_lowCut[0] = 100, bin_lowCut[1]= 250, bin_lowCut[2]= 500, bin_lowCut[3]= 1000,bin_lowCut[4]= 1500, bin_lowCut[5]= 2000, bin_lowCut[6]= 2500, bin_lowCut[7]= 3000, bin_lowCut[8]= 3500, bin_lowCut[9]= 4000, bin_lowCut[10]= 4500, bin_lowCut[11]= 5000, bin_lowCut[12]= 6000, bin_lowCut[13]= 7000, bin_lowCut[14]= 8000, bin_lowCut[15]= 9000, bin_lowCut[16]= 10000;
   
+
+  for(int i = 0; i < n_bin; i++){
+    TH1D *h_AoE_bin = new TH1D("h_AoE_bin",Form("chn%d;A/E;Counts",chn), bin_lowCut[i], 0., 2.);
+    TH1D *h_AoE1_bin = new TH1D("h_AoE1_bin",Form(";A/E;Counts",chn), bin_lowCut[i], 0., 2.);
+    TH1D *h_AoE2_bin = new TH1D("h_AoE2_bin",Form(";A/E;Counts",chn), bin_lowCut[i], 0., 2.);
+    TH1D *h_AoE3_bin = new TH1D("h_AoE3_bin", Form(";A/E;Counts",chn), bin_lowCut[i], 0., 2.);
+
+    for ( int j = 0; j < events;j++){
+      double AoEnorm = AoEs.at(j)/mean_aoe;
+      if ( (energies.at(j) >= min_dep) && (energies.at(j) <= max_dep) ) {
+	h_AoE_bin->Fill(AoEnorm);
+      }
+      else if ( (energies.at(j) >= min_dep2) && (energies.at(j) <= min_dep) ) {
+	h_AoE1_bin->Fill(AoEnorm);
+      }
+      else if ( (energies.at(j) >= max_dep) && (energies.at(j) <= max_dep2) ) {
+	h_AoE2_bin->Fill(AoEnorm);
+      }
+      else if ( (energies.at(j) >= max_dep2) && (energies.at(j) <= max_dep3) ) {
+	h_AoE3_bin->Fill(AoEnorm);
+      }
+    }
+  
+    h_AoE2_bin->Add(h_AoE2_bin);
+    h_AoE1_bin->Add(h_AoE2_bin);
+    h_AoE1_bin->Add(h_AoE3_bin,-1);
+    h_AoE_bin->Add(h_AoE1_bin,-1);
+  
+    double totIntegral_bin = h_AoE_bin->Integral(1, h_AoE_bin->GetNbinsX());
+    cout << "Total integral = " << totIntegral_bin << endl;
+  
+    double SurvFrac_d_bin = 1.;
+    double cutIntegral_bin = totIntegral_bin;
+    int low_Bin = 1;
+    while ( SurvFrac_d_bin >= 0.905 ){
+      cutIntegral_bin = h_AoE_bin->Integral(low_Bin, h_AoE_bin->GetNbinsX());
+      SurvFrac_d_bin = (double)cutIntegral_bin/totIntegral_bin;
+      low_Bin++;}
+    
+    lowCut[i] = h_AoE_bin->GetBinCenter(low_Bin);
+    cout << "Bin number = " << bin_lowCut[i] << "  " << "AoE_lowCut = " << low_Bin << " -> " << lowCut[i] << endl;      
+    cout << "CutIntegral = " << cutIntegral_bin << endl;
+    cout << "SF_dep = " << SurvFrac_d_bin << endl;}
+    
+  TCanvas *c_cut = new TCanvas("c_cut","LowCut vs bin");
+  TGraph *g_cut = new TGraph (n_bin,bin_lowCut,lowCut);
+
+  g_cut->SetTitle(Form("chn%d",chn));
+  g_cut->GetXaxis()->SetTitle("bin");
+  g_cut->GetYaxis()->SetTitle("LowCut");
+  g_cut->SetMarkerColor(4);
+  g_cut->SetLineColor(4);
+  g_cut->SetMarkerStyle(21);
+  g_cut->Draw("AP");
+
+  TLine *line_cut = new TLine(0,lowCut[n_bin-1], bin_lowCut[n_bin-1], lowCut[n_bin-1]);
+  line_cut->SetLineColor(2);
+  line_cut->Draw();
+  TLegend *leg_cut = new TLegend(0.7,0.8,0.9,0.9,"","NDC");
+  leg_cut->AddEntry(line_cut,Form("LowCut = %5.3f ", lowCut[n_bin-1]),"l");
+  leg_cut->Draw();
+  c_cut->Print(Form("%s/chn%d_LowCut_vs_bin.pdf",resdir,chn));
+
+  //-------------- Analysis with a fixed bin for lowCut-----
+  cout << "Analysis with a fixed bib for LowCut" << endl;
   h_AoE2->Add(h_AoE2);
-  h_AoE1->Add(h_AoE2);
+  h_AoE1->Add(h_AoE);
   h_AoE1->Add(h_AoE3,-1);
   h_AoE->Add(h_AoE1,-1);
-  //h_AoE->Scale(1./h_AoE->GetBinContent(h_AoE->GetMaximumBin()));
-  
+
   double totIntegral = h_AoE->Integral(1, h_AoE->GetNbinsX());
   cout << "Total integral = " << totIntegral << endl;
-  
+
   double SurvFrac_d = 1.;
   double cutIntegral = totIntegral;
   int lowBin = 1;
   while ( SurvFrac_d >= 0.905 ){
     cutIntegral = h_AoE->Integral(lowBin, h_AoE->GetNbinsX());
     SurvFrac_d = (double)cutIntegral/totIntegral;
-    lowBin++;
-  }
+    lowBin++;}
+
   double AoE_lowCut = h_AoE->GetBinCenter(lowBin);
-  cout << "AoE_lowCut = " << lowBin << " -> " << AoE_lowCut << endl;      
+  cout << "AoE_lowCut = " << lowBin << " -> " << AoE_lowCut << endl;
   cout << "CutIntegral = " << cutIntegral << endl;
   cout << "SF_dep = " << SurvFrac_d << endl;
   cout << "sigma_aoe = " << sigma_AoE << endl;
-  //double AoE_highCut = mu_AoE + 3.*sigma_AoE;
-  hAoE->Draw();  
-  
+  hAoE->Draw();
+
   //------ Print the result -----
   
   TLine *line_l = new TLine(AoE_lowCut,c1->GetUymin(),AoE_lowCut,1.0);
@@ -505,8 +576,8 @@ int main( int argc, char* argv[]){
   leg_p->AddEntry(h_qbb,"ROI","l");
   leg_p->Draw();
   c1->Update();
-  c1->Print(Form("%s/chn%d_AoE.pdf",resdir,chn));
-  //myapp->Run();
+  c1->Print(Form("%s/chn%d_AoE_all.pdf",resdir,chn));
+  //myapp->Run();*/
   return 0;
 }
 

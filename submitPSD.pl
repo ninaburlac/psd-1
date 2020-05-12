@@ -115,7 +115,7 @@ while ($inQueue) {
 	umask $old_umask;
 	
 	my $from = 'psdtest';
-	my $to = 'valerio.dandrea\@lngs.infn.it';
+	my $to = 'ninaburlac.nb\@gmail.com';
 	my $subject = "psd";
 	#my $fwhmFile = $scandir . "/FWHM_chn" . $chn . ".txt";
 	my $body = "Hi, \n this is an automatic message from the test of the PSD";
