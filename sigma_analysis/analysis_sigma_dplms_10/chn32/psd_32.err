@@ -1,0 +1,8 @@
+/etc/profile.d/lngs.sh: line 1: ulimit: max memory size: cannot modify limit: Operazione non permessa
+-bash: /users/b/burlac/.bash_profile: Permesso negato
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_sigma_10/chn32/chn32_spectrum.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_sigma_10/chn32/chn32_DEP_FEP.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_sigma_10/chn32/chn32_AoE.pdf has been created
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/var/lib/torque/mom_priv/jobs/4658542.xmaster.lngs.infn.it.SC: line 6:  7770 Annullato               (core dumped) /nfs/gerda6/users/burlac/psd_dplms/processPSD /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_sigma_10/chn32 /nfs/gerda6/users/burlac/psd/analysis/run0098-cal_dplms_10.tier.root 32 1 10 > /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_sigma_10/chn32/psd_chn32.out

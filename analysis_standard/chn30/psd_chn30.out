@@ -25,7 +25,7 @@ event n.15000000
 event n.16000000
 event n.17000000
 Selected events: 86230
-The time to read waveforms: 27.17 s
+The time to read waveforms: 31.26 s
 Initialization of DEP&FEP background  = 8.5
  FCN=108.455 FROM MIGRAD    STATUS=CONVERGED     227 CALLS         228 TOTAL
                      EDM=7.0256e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
@@ -51,88 +51,297 @@ AoE: max = 1.68653 max = 0.0391279
    4  p3           4.38210e-03   5.38920e-03   4.12262e-05   9.71305e-01
    5  p4           3.41087e-03   4.19200e-03   3.20693e-05  -1.38390e+00
                                ERR DEF= 0.5
+Analysis with a fixed bin for LowCut
 Total integral = 1083
-Bin number = 100  AoE_lowCut = 52 -> 1.03
-CutIntegral = 525
-SF_dep = 0.484765
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 250  AoE_lowCut = 125 -> 0.996
-CutIntegral = 971
-SF_dep = 0.896584
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 500  AoE_lowCut = 248 -> 0.99
-CutIntegral = 971
-SF_dep = 0.896584
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 1000  AoE_lowCut = 494 -> 0.987
-CutIntegral = 971
-SF_dep = 0.896584
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 1500  AoE_lowCut = 740 -> 0.986
-CutIntegral = 971
-SF_dep = 0.896584
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 2000  AoE_lowCut = 985 -> 0.9845
+AoE_lowCut = 1968 -> 0.98375
 CutIntegral = 977
 SF_dep = 0.902124
 sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 2500  AoE_lowCut = 1231 -> 0.9844
-CutIntegral = 978
-SF_dep = 0.903047
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 3000  AoE_lowCut = 1477 -> 0.984333
-CutIntegral = 976
-SF_dep = 0.9012
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 3500  AoE_lowCut = 1723 -> 0.984286
-CutIntegral = 976
-SF_dep = 0.9012
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 4000  AoE_lowCut = 1968 -> 0.98375
-CutIntegral = 977
-SF_dep = 0.902124
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 4500  AoE_lowCut = 2214 -> 0.983778
-CutIntegral = 976
-SF_dep = 0.9012
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 5000  AoE_lowCut = 2460 -> 0.9838
-CutIntegral = 978
-SF_dep = 0.903047
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 6000  AoE_lowCut = 2951 -> 0.9835
-CutIntegral = 977
-SF_dep = 0.902124
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 7000  AoE_lowCut = 3443 -> 0.983571
-CutIntegral = 976
-SF_dep = 0.9012
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 8000  AoE_lowCut = 3934 -> 0.983375
-CutIntegral = 977
-SF_dep = 0.902124
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 9000  AoE_lowCut = 4426 -> 0.983444
-CutIntegral = 976
-SF_dep = 0.9012
-sigma_aoe = 0.00848778
-Total integral = 1083
-Bin number = 10000  AoE_lowCut = 4917 -> 0.9833
-CutIntegral = 977
-SF_dep = 0.902124
-sigma_aoe = 0.00848778
+ FCN=122.715 FROM MIGRAD    STATUS=CONVERGED     188 CALLS         189 TOTAL
+                     EDM=9.47029e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           1.27429e+02   5.31193e+00   3.23124e-02  -3.99673e-06
+   2  p1           1.59280e+03   3.36395e-02   7.59506e-04   1.75655e-03
+   3  p2           9.33492e-01   2.79178e-02   1.73954e-05  -4.67425e-02
+   4  p3           6.12854e+00   1.86660e+00   1.10941e-02  -1.84354e-04
+   5  p4           1.62080e+03   2.73421e-01   2.07168e-03  -1.18447e-04
+   6  p5           8.58820e-01   2.97788e-01   1.87091e-04  -8.99566e-03
+   7  p6           4.82366e+00   1.67314e-01   1.22796e-03  -3.42093e-04
+                               ERR DEF= 0.5
+AreaDEP_tot = 1462
+Area_DEP_tot_psa = 1150
+AreaDEP = 1074
+Area_DEP_psa = 958
+Area_FEP_tot = 673
+Area_FEP_tot_psa = 193
+Area_FEP = 346
+Area_FEP_psa = 35
+Calculation of AoE vs E correction
+ FCN=98.9293 FROM MIGRAD    STATUS=CONVERGED    1703 CALLS        1704 TOTAL
+                     EDM=1.93785e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.44527e+01   2.55257e+00   7.65106e-04   1.43729e-04
+   2  p1           1.00314e+00   5.05722e-04   1.69954e-04  -3.43557e-06
+   3  p2           1.19793e-02   4.47488e-04   1.94742e-04  -3.78630e-04
+   4  p3           7.09165e+00   6.72335e-01   1.83836e-03   3.60225e-04
+   5  p4           2.11286e+00   5.89552e-01   1.47886e-03  -9.79100e-04
+   6  p5           1.01147e+00   1.12821e-02   3.56025e-05  -2.14999e-02
+   7  p6          -1.62339e-07   8.84341e-01   1.37772e-02** at limit **
+   8  p7           2.60177e-02   4.59444e-03   4.63524e-04  -8.29657e-04
+                               ERR DEF= 0.5
+ FCN=124.676 FROM MIGRAD    STATUS=CONVERGED    1751 CALLS        1752 TOTAL
+                     EDM=6.02804e-08    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.28316e+01   2.56349e+00   8.46419e-04   8.21415e-05
+   2  p1           1.00192e+00   5.05677e-04   1.86980e-04  -5.97277e-04
+   3  p2           1.14827e-02   4.83968e-04   2.26073e-04  -2.01405e-03
+   4  p3           5.76501e+00   5.90079e-01   1.88671e-03  -2.75316e-04
+   5  p4           2.27092e+00   6.26586e-01   1.89051e-03   4.30657e-04
+   6  p5           1.00878e+00   1.10117e-02   4.14701e-05  -7.96187e-03
+   7  p6          -1.81648e-08   8.78123e-01   1.57559e-02** at limit **
+   8  p7           2.22599e-02   4.21781e-03   5.25666e-04  -4.57571e-04
+                               ERR DEF= 0.5
+ FCN=124.915 FROM MIGRAD    STATUS=CONVERGED    1144 CALLS        1145 TOTAL
+                     EDM=6.20557e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.39254e+01   2.77339e+00   8.98368e-04  -2.04578e-03
+   2  p1           1.00194e+00   4.63677e-04   1.74303e-04  -7.58291e-03
+   3  p2           9.96040e-03   4.23173e-04   2.29505e-04  -1.22764e-02
+   4  p3           7.31358e+00   6.68546e-01   2.35898e-03  -2.08401e-04
+   5  p4           3.97274e+00   6.68741e-01   2.05335e-03   7.92093e-05
+   6  p5           1.00392e+00   1.02937e-02   3.65938e-05  -5.58011e-02
+   7  p6          -1.06999e-07   6.37994e-01   8.12380e-03** at limit **
+   8  p7           2.46824e-02   3.78838e-03   4.52541e-04  -5.35203e-03
+                               ERR DEF= 0.5
+ FCN=114.226 FROM MIGRAD    STATUS=CONVERGED    1005 CALLS        1006 TOTAL
+                     EDM=2.16598e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           6.46049e+01   3.18892e+00   8.43653e-04  -1.93580e-04
+   2  p1           1.00021e+00   3.91475e-04   1.41623e-04   7.76655e-04
+   3  p2           8.92396e-03   3.49743e-04   2.04653e-04  -1.25710e-03
+   4  p3           7.66973e+00   6.80793e-01   2.39234e-03  -1.15732e-03
+   5  p4           4.58081e+00   6.68195e-01   2.04848e-03   1.44829e-03
+   6  p5           1.00316e+00   8.83872e-03   3.23582e-05   6.19296e-02
+   7  p6          -7.19276e-10   1.33406e-01   5.51499e-03** at limit **
+   8  p7           2.36669e-02   3.22889e-03   4.00380e-04   5.57657e-04
+                               ERR DEF= 0.5
+ FCN=111.468 FROM MIGRAD    STATUS=CONVERGED     939 CALLS         940 TOTAL
+                     EDM=3.76034e-08    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   3.8 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           6.48146e+01   3.26425e+00   2.17752e-05  -1.01159e-03
+   2  p1           9.99684e-01   4.02572e-04   1.38465e-05   4.65131e-03
+   3  p2           8.77725e-03   3.94703e-04  -2.28396e-05  -4.71837e-03
+   4  p3           9.62497e+00   7.60982e-01   5.13145e-04  -1.97363e-04
+   5  p4           6.25034e+00   7.22628e-01  -3.08848e-05  -6.26432e-05
+   6  p5           9.91330e-01   9.36248e-03  -1.12977e-06  -3.65364e-02
+   7  p6          -8.88551e-10   7.46986e-02   4.87377e-04** at limit **
+   8  p7           2.31367e-02   2.83841e-03   1.27507e-05  -9.04277e-04
+                               ERR DEF= 0.5
+ FCN=105.419 FROM MIGRAD    STATUS=CONVERGED     937 CALLS         938 TOTAL
+                     EDM=1.32788e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.78781e+01   3.12366e+00   8.65913e-04  -2.03040e-03
+   2  p1           9.98426e-01   4.19755e-04   1.43360e-04   2.18246e-02
+   3  p2           8.48944e-03   3.81702e-04   2.19366e-04   7.38935e-04
+   4  p3           8.39763e+00   7.27755e-01   2.57577e-03  -1.37698e-03
+   5  p4           5.89039e+00   7.39130e-01   2.18244e-03   1.96582e-03
+   6  p5           9.97300e-01   9.16267e-03   2.97518e-05   6.94964e-02
+   7  p6          -1.35109e-08   7.02499e-02   3.85138e-03** at limit **
+   8  p7           2.44779e-02   3.10015e-03   3.47378e-04   1.03898e-02
+                               ERR DEF= 0.5
+ FCN=113.19 FROM MIGRAD    STATUS=CONVERGED     931 CALLS         932 TOTAL
+                     EDM=2.38852e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           4.87149e+01   2.88418e+00   9.96647e-04   1.58222e-03
+   2  p1           9.97088e-01   4.69102e-04   1.65988e-04   1.23711e-02
+   3  p2           8.50584e-03   4.38720e-04   2.51865e-04   5.27917e-03
+   4  p3           9.52789e+00   7.61058e-01   2.93145e-03  -2.49381e-04
+   5  p4           6.54228e+00   7.22761e-01   2.30686e-03   6.91576e-04
+   6  p5           9.89950e-01   8.50882e-03   2.73283e-05   3.54684e-02
+   7  p6          -4.27219e-09   1.00992e-01   4.69011e-03** at limit **
+   8  p7           2.01372e-02   2.52317e-03   3.15024e-04  -1.03451e-03
+                               ERR DEF= 0.5
+ FCN=129.217 FROM MIGRAD    STATUS=CONVERGED     729 CALLS         730 TOTAL
+                     EDM=6.45935e-09    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.4 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.80530e+01   3.41332e+00  -3.79539e-05   2.76471e-04
+   2  p1           9.96048e-01   4.65336e-04   3.15695e-05   5.70874e-04
+   3  p2           7.61335e-03   4.11708e-04  -7.62616e-05   1.44576e-03
+   4  p3           1.53144e+01   1.08781e+00   8.65835e-04   1.19055e-05
+   5  p4           8.66117e+00   6.04182e-01  -2.28743e-04  -9.35328e-05
+   6  p5           9.94911e-01   4.12285e-03   5.93370e-06   1.72177e-02
+   7  p6          -1.12554e-12   3.91240e-03   5.40511e-05** at limit **
+   8  p7           1.53960e-02   1.36216e-03  -3.53098e-05   1.12041e-03
+                               ERR DEF= 0.5
+ FCN=132.347 FROM MIGRAD    STATUS=CONVERGED     760 CALLS         761 TOTAL
+                     EDM=2.5441e-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.47934e+01   3.17958e+00   1.10260e-03   1.14036e-03
+   2  p1           9.95662e-01   4.49017e-04   1.69788e-04  -2.01138e-02
+   3  p2           8.06097e-03   4.11022e-04   2.71561e-04   2.69446e-03
+   4  p3           1.64453e+01   9.99351e-01   4.63621e-03   8.03256e-04
+   5  p4           9.44818e+00   7.79134e-01   2.55587e-03  -1.14043e-03
+   6  p5           9.73682e-01   7.55302e-03   2.29083e-05   1.04875e-02
+   7  p6          -6.70889e-08   3.34602e-02   2.89764e-03** at limit **
+   8  p7           2.17857e-02   1.82727e-03   2.33629e-04   6.99558e-04
+                               ERR DEF= 0.5
+ FCN=135.478 FROM MIGRAD    STATUS=CONVERGED     681 CALLS         682 TOTAL
+                     EDM=2.33172e-08    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   1.7 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.55118e+01   3.13384e+00  -1.60463e-04  -6.50271e-05
+   2  p1           9.93945e-01   5.71384e-04  -6.55903e-06   3.21543e-03
+   3  p2           8.89031e-03   5.22235e-04   5.52861e-05   2.21547e-03
+   4  p3           1.71680e+01   1.04516e+00   3.50033e-04  -3.37265e-05
+   5  p4           8.73691e+00   6.46139e-01  -8.92628e-04   9.92022e-05
+   6  p5           9.78414e-01   6.83228e-03  -4.36698e-07   8.09254e-03
+   7  p6          -9.70572e-10   3.10225e-02   8.47373e-05** at limit **
+   8  p7           1.92668e-02   1.79573e-03   1.44385e-05   5.09720e-04
+                               ERR DEF= 0.5
+ FCN=136.809 FROM MIGRAD    STATUS=CONVERGED     676 CALLS         677 TOTAL
+                     EDM=1.44164e-07    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   4.2 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.10914e+01   2.77061e+00  -7.33435e-06   3.68061e-04
+   2  p1           9.92631e-01   5.77808e-04   2.05973e-05   7.02792e-03
+   3  p2           9.76276e-03   5.10006e-04  -5.94514e-05  -1.99502e-03
+   4  p3           1.59469e+01   1.77527e+00   1.38063e-03   1.44297e-04
+   5  p4           5.66305e+00   2.45879e+00  -5.07215e-03  -8.74795e-04
+   6  p5           9.73524e-01   1.05865e-02   2.16043e-05  -1.05231e-01
+   7  p6          -1.32956e-01   1.49286e-01  -7.90298e-04   4.35010e-03
+   8  p7           2.32497e-02   2.40220e-03  -1.31502e-04  -7.56729e-03
+                               ERR DEF= 0.5
+ FCN=129.19 FROM MIGRAD    STATUS=CONVERGED     711 CALLS         712 TOTAL
+                     EDM=6.08384e-07    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.3 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.15123e+01   2.97684e+00   7.76358e-04  -1.96825e-03
+   2  p1           9.92972e-01   5.32161e-04  -2.95480e-05   5.90706e-03
+   3  p2           8.89491e-03   4.65872e-04  -8.33422e-05   3.87434e-03
+   4  p3           1.55106e+01   1.04359e+00   1.05066e-03   1.09154e-04
+   5  p4           8.72264e+00   6.53908e-01  -1.81573e-03  -4.31090e-04
+   6  p5           9.83113e-01   5.90424e-03   6.05459e-06  -4.47449e-02
+   7  p6          -1.55059e-08   1.87569e-02   5.01369e-04** at limit **
+   8  p7           1.88537e-02   1.68034e-03  -5.29351e-05   1.83686e-03
+                               ERR DEF= 0.5
+ FCN=135.362 FROM MIGRAD    STATUS=CONVERGED     748 CALLS         749 TOTAL
+                     EDM=6.71508e-07    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   1.6 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           5.73427e+01   3.07447e+00  -1.66270e-03   1.76708e-03
+   2  p1           9.91708e-01   5.61036e-04  -9.13247e-06  -8.16454e-03
+   3  p2           9.39535e-03   4.69870e-04   2.31552e-04  -7.20512e-03
+   4  p3           1.72615e+01   1.14057e+00  -5.91799e-03  -4.19416e-04
+   5  p4           8.18015e+00   5.80207e-01  -7.73094e-03  -1.86947e-04
+   6  p5           9.84007e-01   4.84851e-03   5.85381e-05   7.14299e-02
+   7  p6          -4.91306e-09   8.66881e-03  -6.98061e-04** at limit **
+   8  p7           1.81828e-02   1.49529e-03  -1.89721e-04   4.48351e-03
+                               ERR DEF= 0.5
+ FCN=155.329 FROM MIGRAD    STATUS=CONVERGED     774 CALLS         775 TOTAL
+                     EDM=1.13278e-07    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   1.5 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           6.96301e+01   3.68118e+00   2.10186e-04  -2.78015e-03
+   2  p1           9.91392e-01   5.76450e-04  -1.51165e-04   4.64120e-04
+   3  p2           8.72574e-03   5.26661e-04   1.13023e-04  -6.95682e-03
+   4  p3           2.38631e+01   1.50808e+00  -3.10762e-03  -2.78738e-04
+   5  p4           9.69307e+00   5.47397e-01  -1.37279e-03   6.36683e-04
+   6  p5           9.86777e-01   3.63026e-03  -9.60222e-08   7.46878e-02
+   7  p6          -4.17615e-11   3.13681e-03  -7.40431e-05** at limit **
+   8  p7           1.71189e-02   1.18091e-03   1.66563e-04   9.18855e-03
+                               ERR DEF= 0.5
+ FCN=170.256 FROM MIGRAD    STATUS=CONVERGED     756 CALLS         757 TOTAL
+                     EDM=8.54841e-08    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   1.8 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           7.29913e+01   3.67305e+00  -3.06175e-04   2.10415e-03
+   2  p1           9.90607e-01   5.37533e-04  -1.48974e-05  -2.66645e-03
+   3  p2           8.99787e-03   5.01221e-04   1.30081e-04   3.29215e-03
+   4  p3           2.78088e+01   1.64929e+00  -2.37987e-03   3.75571e-04
+   5  p4           1.08658e+01   5.55412e-01   2.44893e-04  -6.88963e-04
+   6  p5           9.83526e-01   3.68489e-03  -4.90108e-06  -4.67878e-02
+   7  p6          -2.13318e-12   2.18686e-03  -3.08910e-05** at limit **
+   8  p7           1.77901e-02   1.10501e-03  -4.02359e-05  -3.78540e-03
+                               ERR DEF= 0.5
+ FCN=159.751 FROM MIGRAD    STATUS=CONVERGED     754 CALLS         755 TOTAL
+                     EDM=2.71205e-07    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   1.5 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           8.37702e+01   3.80835e+00   6.19179e-04   3.47575e-03
+   2  p1           9.88309e-01   5.08761e-04   1.59155e-04   9.67183e-03
+   3  p2           9.74095e-03   4.34987e-04  -2.85364e-04   1.78231e-02
+   4  p3           2.80345e+01   1.64298e+00  -7.65647e-03  -4.60262e-05
+   5  p4           1.00670e+01   5.29355e-01  -4.22040e-03   9.96388e-04
+   6  p5           9.82564e-01   3.68115e-03   2.85807e-05   1.64770e-01
+   7  p6          -4.81604e-11   2.59000e-03  -4.62036e-04** at limit **
+   8  p7           1.67919e-02   1.10234e-03   2.04360e-06  -7.87028e-03
+                               ERR DEF= 0.5
+
+****************************************
+Minimizer is Linear
+Chi2                      =       26.109
+NDf                       =           14
+p0                        =      1.01228   +/-   0.00046467  
+p1                        = -9.58608e-06   +/-   2.74872e-07 
+Calculation of survival fraction for 2104
+ FCN=148.815 FROM MIGRAD    STATUS=CONVERGED     101 CALLS         102 TOTAL
+                     EDM=6.36468e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           8.09200e+01   3.76375e+00   2.53288e-02  -1.59906e-04
+   2  p1           2.10348e+03   5.99080e-02   1.00302e-03  -7.77269e-03
+   3  p2           1.39955e+00   5.28215e-02   2.99320e-05  -1.20960e-01
+   4  p3           1.31933e+01   2.23651e-01   1.85207e-03   1.32508e-03
+                               ERR DEF= 0.5
+Area_tot = 1531
+Area_tot_psa = 380
+Area = 895
+Area_psa = 96
+ FCN=140.61 FROM MIGRAD    STATUS=CONVERGED     100 CALLS         101 TOTAL
+                     EDM=6.01409e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           1.03464e+01   1.66815e+00   1.05600e-02   3.70225e-05
+   2  p1           2.10341e+03   2.22912e-01   1.82264e-03  -3.07400e-03
+   3  p2           1.42481e+00   2.33922e-01   1.22869e-04   6.63766e-03
+   4  p3           5.39824e+00   1.46605e-01   1.16350e-03   2.62846e-03
+                               ERR DEF= 0.5
+Calculation of survival fraction for 2614.5
+ FCN=171.733 FROM MIGRAD    STATUS=CONVERGED     212 CALLS         213 TOTAL
+                     EDM=2.14515e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           6.78788e+02   1.06650e+01   7.81415e-02  -8.71937e-06
+   2  p1           2.61462e+03   1.40851e-02   1.24675e-03  -6.72672e-03
+   3  p2           1.09757e+00   1.03678e-02   7.27427e-06   3.79806e-01
+   4  p3           4.72913e-01   5.92858e-02   5.35909e-04  -1.33134e-03
+                               ERR DEF= 0.5
+Area_tot = 6267
+Area_tot_psa = 928
+Area = 6225
+Area_psa = 923
+ FCN=159.338 FROM MIGRAD    STATUS=CONVERGED     184 CALLS         185 TOTAL
+                     EDM=3.58754e-09    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   2.2 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  p0           9.76122e+01   4.07950e+00  -4.71171e-03   8.83252e-06
+   2  p1           2.61473e+03   3.80580e-02  -5.16304e-05  -5.87364e-04
+   3  p2           1.11652e+00   2.83126e-02   2.70866e-06   3.28721e-02
+   4  p3           2.96320e-02   1.12191e-02  -3.03195e-06  -4.59838e-04
+                               ERR DEF= 0.5
+Calculation of survival fraction background at 2039
+Area = 2917
+Area_psa = 1262
+Calculation of survival fraction background at 2350
+Area = 6216
+Area_psa = 2599

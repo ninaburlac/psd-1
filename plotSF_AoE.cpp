@@ -46,7 +46,7 @@ int main( int argc, char* argv[]){
   file.open(name);
   
   double x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
-  double x11, x12, x13, x14;
+  double x11, x12, x13, x14, x15, x16;
   double chn[1000];
   double AoE[1000];
   double AoE_err[1000];
@@ -60,10 +60,12 @@ int main( int argc, char* argv[]){
   double SF_2614_err[1000];
   double SF_bkg[1000];
   double SF_bkg_err[1000];
+  double SF_edge[1000];
+  double SF_edge_err[1000];
   
   int n_lines = 0;
   while (1){
-    file >> x1 >> x2 >> x3 >> x4 >> x5 >> x6 >> x7 >> x8 >> x9 >> x10 >> x11 >> x12 >> x13 >> x14;
+    file >> x1 >> x2 >> x3 >> x4 >> x5 >> x6 >> x7 >> x8 >> x9 >> x10 >> x11 >> x12 >> x13 >> x14 >> x15 >> x16;
     if (!file.good()) break;
     chn[n_lines] = x1;
     AoE[n_lines] = x2;
@@ -78,6 +80,8 @@ int main( int argc, char* argv[]){
     SF_2614_err[n_lines] = x11;
     SF_bkg[n_lines] = x12;
     SF_bkg_err[n_lines] = x13;
+    SF_edge[n_lines] = x14;
+    SF_edge_err[n_lines] = x15;
     n_lines++;
   }
   file.close(); 
@@ -99,6 +103,7 @@ int main( int argc, char* argv[]){
   TGraph *g_sep = new TGraph(n_lines,chn, SF_sep);                            
   TGraph *g_2614 = new TGraph(n_lines,chn, SF_2614);                          
   TGraph *g_bkg = new TGraph(n_lines,chn, SF_bkg); 
+  TGraph *g_edge = new TGraph(n_lines,chn, SF_edge);
   
   g_dep->SetTitle("run 98");
   g_dep->GetXaxis()->SetTitle("Detector number");
@@ -111,30 +116,35 @@ int main( int argc, char* argv[]){
   g_sep->SetMarkerColor(kMagenta+2);
   g_2614->SetMarkerColor(kTeal-7);
   g_bkg->SetMarkerColor(kMagenta-7);
+  g_edge->SetMarkerColor(kCyan+1);
 
   g_dep->SetLineColor(2);
   g_fep->SetLineColor(8);
   g_sep->SetLineColor(kMagenta+2);
   g_2614->SetLineColor(kTeal-7);
   g_bkg->SetLineColor(kMagenta-7);
+  g_edge->SetLineColor(kCyan+1);
 
   g_dep->SetLineWidth(2);
   g_fep->SetLineWidth(2);
   g_sep->SetLineWidth(2);
   g_2614->SetLineWidth(2);
   g_bkg->SetLineWidth(2);
+  g_edge->SetLineWidth(2);
 
   g_dep->SetMarkerStyle(20);
   g_fep->SetMarkerStyle(22);
   g_sep->SetMarkerStyle(23);
   g_2614->SetMarkerStyle(20);
   g_bkg->SetMarkerStyle(20);
+  g_edge->SetMarkerStyle(20);
 
   g_dep->Draw("AP");
   g_fep->Draw("P");
   g_sep->Draw("P");
   g_2614->Draw("P");
   g_bkg->Draw("P");
+  g_edge->Draw("P");
   c1->Update();
   
   TText *xlab = new TText();
@@ -182,6 +192,7 @@ int main( int argc, char* argv[]){
   leg->AddEntry(g_sep,"SEP","PL");
   leg->AddEntry(g_2614,"FEP_{2615}","PL");
   leg->AddEntry(g_bkg,"ROI","PL");
+  leg->AddEntry(g_edge,"C.Edge","PL");
   leg->Draw();
   c1->Update();
   c1->Print(Form("%s/SF_peaks_%s.pdf",resdir,text));

@@ -1,0 +1,7 @@
+-bash: /users/b/burlac/.bash_profile: Permesso negato
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8/chn8_spectrum.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8/chn8_DEP_FEP.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8/chn8_AoE.pdf has been created
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/var/lib/torque/mom_priv/jobs/4664309.xmaster.lngs.infn.it.SC: line 6:  5325 Annullato               (core dumped) /nfs/gerda6/users/burlac/psd_dplms/processPSD /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8 /nfs/gerda6/users/burlac/psd/analysis/run0098-cal_dplms_100.tier.root 8 1 100 > /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8/psd_chn8.out

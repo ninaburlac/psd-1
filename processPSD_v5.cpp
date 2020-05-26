@@ -34,7 +34,7 @@ using namespace std;
 
 vector<double> AoE_corr(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe );
 vector<double> calculateSF(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double n_sigma, double AoE_lowCut, vector<double> b, double peak);
-vector<double> calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, vector<double> b, double qbb);
+vector<double> calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, vector<double> b, double qbb, int range);
 
 int main( int argc, char* argv[]){
   //TApplication * myapp = new TApplication("myapp",0,0);
@@ -191,7 +191,7 @@ int main( int argc, char* argv[]){
   
   //--------------- draw the A/E of the DEP --------------
   int nbin = 100;
-  int nbin_cut = 3000;
+  int nbin_cut = 4000;
   TH1D *hAoE = new TH1D("hAoE",Form("chn%d;A/E;Counts",chn), nbin, 0.7, 1.1);
   TH1D *hAoE1 = new TH1D("hAoE1",Form(";A/E;Counts",chn), nbin, 0.7, 1.1);
   TH1D *hAoE2 = new TH1D("hAoE2",Form(";A/E;Counts",chn), nbin, 0.7, 1.1);
@@ -254,6 +254,7 @@ int main( int argc, char* argv[]){
   //---------------- PSA analysis --------------------
   ////////////////////////////////////////////////////
 
+  /*
   //------- Study of LowCut vs bin -----------
   cout << "Study of LowCut vs bin" << endl;
   int n_bin = 17;
@@ -323,11 +324,13 @@ int main( int argc, char* argv[]){
   leg_cut->AddEntry(line_cut,Form("LowCut = %5.3f ", lowCut[n_bin-1]),"l");
   leg_cut->Draw();
   c_cut->Print(Form("%s/chn%d_LowCut_vs_bin.pdf",resdir,chn));
+  */
 
   //-------------- Analysis with a fixed bin for lowCut-----
-  cout << "Analysis with a fixed bib for LowCut" << endl;
+
+  cout << "Analysis with a fixed bin for LowCut" << endl;
   h_AoE2->Add(h_AoE2);
-  h_AoE1->Add(h_AoE);
+  h_AoE1->Add(h_AoE2);
   h_AoE1->Add(h_AoE3,-1);
   h_AoE->Add(h_AoE1,-1);
 
@@ -526,12 +529,13 @@ int main( int argc, char* argv[]){
   
   vector<double> SF_2104 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, b, 2104);
   vector<double> SF_2614 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, b, 2614.5);
-  vector<double> SF_qbb = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, b, 2039);
+  vector<double> SF_qbb = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, b, 2039, 35);
+  vector<double> SF_edge = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, b, 2350, 50);
   
   //-------- Save results in file --------
   std::ofstream fileres;
   char *out_file = Form("%s/PSA_results.txt",resdir);
-  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %d\n",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100, SF_2104.at(0), SF_2104.at(1), SF_2614.at(0), SF_2614.at(1), SF_qbb.at(0), SF_qbb.at(1), weight);
+  char *out_results = Form("%d %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f% 4.2f %4.2f %d\n",chn, FWHM_AoE*100, FWHM_AoE_err*100, Acc_d*100, Acc_d_e*100, Acc_f*100, Acc_f_e*100, SF_2104.at(0), SF_2104.at(1), SF_2614.at(0), SF_2614.at(1), SF_qbb.at(0), SF_qbb.at(1),SF_edge.at(0), SF_edge.at(1), weight);
   fileres.open(out_file);
   fileres << out_results;
   fileres.close();    
@@ -541,6 +545,7 @@ int main( int argc, char* argv[]){
   TH1D *h_2104 = new TH1D("h_2104","", 100, 0.7, 1.1);
   TH1D *h_2614 = new TH1D("h_2614","", 100, 0.7, 1.1);
   TH1D *h_qbb = new TH1D("h_qbb","", 100, 0.7, 1.1);
+  TH1D *h_edge = new TH1D("h_edge","", 100, 0.7, 1.1);
   for ( int i = 0; i < events; i++){
     double AoEnorm = AoEs.at(i)/mean_aoe;
     if ( (energies.at(i)<=SF_2104.at(2)+n_sigma*SF_2104.at(3)) && (energies.at(i)>=SF_2104.at(2)-n_sigma*SF_2104.at(3)) )
@@ -549,11 +554,14 @@ int main( int argc, char* argv[]){
       h_2614->Fill(AoEnorm);
     if ( energies.at(i)<=2074 && energies.at(i)>=2004 )
       h_qbb->Fill(AoEnorm);
+    if ( energies.at(i)<=2400 && energies.at(i)>=2300 )
+      h_edge->Fill(AoEnorm);
   }
   h_2104->Scale(1./h_2104->GetBinContent(h_2104->GetMaximumBin()));
   h_2614->Scale(1./h_2614->GetBinContent(h_2614->GetMaximumBin()));
   h_qbb->Scale(1./h_qbb->GetBinContent(h_qbb->GetMaximumBin()));
-  
+  h_edge->Scale(1./h_edge->GetBinContent(h_edge->GetMaximumBin()));  
+
   c1->cd();
   gStyle->SetOptStat(0);
   hAoE->Draw();
@@ -568,12 +576,16 @@ int main( int argc, char* argv[]){
   h_qbb->Draw("same");
   h_qbb->SetLineColor(2);
   h_qbb->SetLineWidth(2);
+  h_edge->Draw("same");
+  h_edge->SetLineColor(kGreen+3);
+  h_edge->SetLineWidth(2);
   c1->Update();
   TLegend *leg_p = new TLegend(0.1,0.7,0.3,0.9,"","NDC");
   leg_p->AddEntry(hAoE,"DEP","l");
   leg_p->AddEntry(h_2104,"SEP","l");
   leg_p->AddEntry(h_2614,"FEP_{2615}","l");
   leg_p->AddEntry(h_qbb,"ROI","l");
+  leg_p->AddEntry(h_edge,"C. edge","l");
   leg_p->Draw();
   c1->Update();
   c1->Print(Form("%s/chn%d_AoE_all.pdf",resdir,chn));
@@ -860,11 +872,12 @@ vector<double> calculateSF(int chn, char* resdir, vector<double> energies, vecto
   return survivalFraction;
 }
 
-vector<double> calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, vector<double> b, double qbb){
+vector<double> calculateSF_bkg(int chn, char* resdir, vector<double> energies, vector<double> AoEs, double mean_aoe, double AoE_lowCut, vector<double> b, double qbb, int range){
   cout << "Calculation of survival fraction background at " << qbb << endl;
   int events = energies.size();
-  double min = (qbb - 35);
-  double max = (qbb + 35);
+ 
+  double min = (qbb - range);
+  double max = (qbb + range);  
   double min_AoE_corr = AoE_lowCut + b.at(1)*(qbb-1592.5);
   
   TH1D *hene = new TH1D("hene","; Energy [keV]; Counts", 300, min, max);  
@@ -914,10 +927,10 @@ vector<double> calculateSF_bkg(int chn, char* resdir, vector<double> energies, v
   TLegend *leg_bkg = new TLegend(0.52,0.8,0.99,0.99,"","NDC");
   leg_bkg->AddEntry(hene,"Before PSD","f");
   leg_bkg->AddEntry(hene_psa,"After PSD","f");
-  leg_bkg->AddEntry("0",Form("SF_{ROI} = (%4.2f #pm %4.2f)%%", SF_bkg*100,SF_bkg_err*100),"0");
+  leg_bkg->AddEntry("0",Form("SF_{%g} = (%4.2f #pm %4.2f)%%",qbb, SF_bkg*100,SF_bkg_err*100),"0");
   leg_bkg->Draw();
   c_4->Update();
-  c_4->Print(Form("%s/chn%d_PSA_bkg2039.pdf",resdir,chn));
+  c_4->Print(Form("%s/chn%d_PSA_bkg%g.pdf",resdir,chn,qbb));
   
   vector<double> survivalFraction;
   survivalFraction.push_back(SF_bkg*100);

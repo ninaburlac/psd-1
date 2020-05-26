@@ -1,92 +1,40 @@
 -bash: /users/b/burlac/.bash_profile: Permesso negato
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_spectrum.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_DEP_FEP.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_AoE.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_AoE_onlyDEP.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_PSA_DEP_FEP.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_AoE_fits.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_AoE_vs_E.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: hene (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_PSA_peak2104.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: hene (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c_4
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_PSA_peak2614.5.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: hene (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c_4
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_PSA_bkg2039.pdf has been created
+Warning in <TFile::Append>: Replacing existing TH1: hene (Potential memory leak).
+Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: c_4
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_PSA_bkg2350.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_standard/chn1/chn1_AoE_all.pdf has been created
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE1 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE2 (Potential memory leak).
-Warning in <TFile::Append>: Replacing existing TH1: h_AoE3 (Potential memory leak).
-
- *** Break *** segmentation violation
-
-
-
-===========================================================
-There was a crash.
-This is the entire stack trace of all threads:
-===========================================================
-#0  0x00007f114823612c in waitpid () from /lib64/libc.so.6
-#1  0x00007f11481bb152 in do_system () from /lib64/libc.so.6
-#2  0x00007f114ceba1a9 in TUnixSystem::StackTrace() () from /usr/local/root/lib/libCore.so
-#3  0x00007f114cebbd1c in TUnixSystem::DispatchSignals(ESignals) () from /usr/local/root/lib/libCore.so
-#4  <signal handler called>
-#5  0x00007f114820807b in __memcpy_sse2 () from /lib64/libc.so.6
-#6  0x00007f114c13543d in TGraph::TGraph(int, double const*, double const*) () from /usr/local/root/lib/libHist.so
-#7  0x0000000000406c03 in main ()
-===========================================================
-
-
-The lines below might hint at the cause of the crash.
-If they do not help you then please submit a bug report at
-http://root.cern.ch/bugs. Please post the ENTIRE stack trace
-from above as an attachment in addition to anything else
-that might help us fixing this issue.
-===========================================================
-#5  0x00007f114820807b in __memcpy_sse2 () from /lib64/libc.so.6
-#6  0x00007f114c13543d in TGraph::TGraph(int, double const*, double const*) () from /usr/local/root/lib/libHist.so
-#7  0x0000000000406c03 in main ()
-===========================================================
-
-

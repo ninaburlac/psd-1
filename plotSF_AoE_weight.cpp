@@ -45,7 +45,7 @@ int main( int argc, char* argv[]){
   file.open(name);
   
   double x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
-  double x11, x12, x13, x14;
+  double x11, x12, x13, x14, x15, x16;
   double AoE[1000];
   double AoE_err[1000];
   double SF_dep[1000];
@@ -58,6 +58,8 @@ int main( int argc, char* argv[]){
   double SF_2614_err[1000];
   double SF_bkg[1000];
   double SF_bkg_err[1000];
+  double SF_edge[1000];
+  double SF_edge_err[1000];
   double weight[1000];
   double AoE_ref = 0;
   double SF_dep_ref = 0;
@@ -65,21 +67,23 @@ int main( int argc, char* argv[]){
   double SF_sep_ref = 0;
   double SF_2614_ref = 0;
   double SF_bkg_ref = 0;
+  double SF_edge_ref = 0;
 
   int n_lines = 0;
   while (1){
-    file >> x1 >> x2 >> x3 >> x4 >> x5 >> x6 >> x7 >> x8 >> x9 >> x10 >> x11 >> x12 >> x13 >> x14;
+    file >> x1 >> x2 >> x3 >> x4 >> x5 >> x6 >> x7 >> x8 >> x9 >> x10 >> x11 >> x12 >> x13 >> x14 >> x15 >> x16;
     if (!file.good()) break;
-    if ( x14 == 0 ){
+    if ( x16 == 0 ){
       AoE_ref = x2;
       SF_dep_ref = x4;
       SF_fep_ref = x6;
       SF_sep_ref = x8;
       SF_2614_ref = x10;
       SF_bkg_ref = x12;
+      SF_edge_ref = x14;
     }
     else {
-      weight[n_lines] = x14;
+      weight[n_lines] = x16;
       AoE[n_lines] = x2;
       AoE_err[n_lines] = x3;
       SF_dep[n_lines] = x4;
@@ -92,6 +96,8 @@ int main( int argc, char* argv[]){
       SF_2614_err[n_lines] = x11;
       SF_bkg[n_lines] = x12;
       SF_bkg_err[n_lines] = x13;
+      SF_edge[n_lines] = x14;
+      SF_edge_err[n_lines] = x15;
       n_lines++;
     }
   }
@@ -107,6 +113,7 @@ int main( int argc, char* argv[]){
   TLine *lin4 = new TLine(weight[0], SF_sep_ref,  weight[n_lines-1], SF_sep_ref);
   TLine *lin5 = new TLine(weight[0], SF_fep_ref,  weight[n_lines-1], SF_fep_ref);
   TLine *lin6 = new TLine(weight[0], SF_2614_ref, weight[n_lines-1], SF_2614_ref);
+  TLine *lin7 = new TLine(weight[0], SF_edge_ref, weight[n_lines-1], SF_edge_ref);
 
   lin1->SetLineWidth(1);
   lin2->SetLineWidth(1);
@@ -114,6 +121,7 @@ int main( int argc, char* argv[]){
   lin4->SetLineWidth(1);
   lin5->SetLineWidth(1);
   lin6->SetLineWidth(1);
+  lin7->SetLineWidth(1);
 
   lin1->SetLineStyle(2);
   lin2->SetLineStyle(2);
@@ -121,13 +129,15 @@ int main( int argc, char* argv[]){
   lin4->SetLineStyle(2);
   lin5->SetLineStyle(2);
   lin6->SetLineStyle(2);
-
+  lin7->SetLineStyle(2);
+ 
   lin1->SetLineColor(4);
   lin2->SetLineColor(2);
   lin3->SetLineColor(kMagenta-7);
   lin4->SetLineColor(kMagenta+2);
   lin5->SetLineColor(8);
   lin6->SetLineColor(kTeal-7);
+  lin7->SetLineColor(kCyan+1);
 
   TGraph *g_1 = new TGraphErrors(n_lines,weight, AoE, 0, AoE_err);
   
@@ -158,7 +168,8 @@ int main( int argc, char* argv[]){
   TGraph *g_sep = new TGraphErrors(n_lines,weight, SF_sep, 0, SF_sep_err);
   TGraph *g_2614 = new TGraphErrors(n_lines,weight, SF_2614, 0,SF_2614_err);
   TGraph *g_bkg = new TGraphErrors(n_lines,weight, SF_bkg, 0,SF_bkg_err);
-  
+  TGraph *g_edge = new TGraphErrors(n_lines,weight, SF_edge, 0,SF_edge_err);  
+
   TLegend *leg2 = new TLegend(0.4,0.8,0.6,0.9);
   leg2->AddEntry(g_dep,"DEP","PL");
   leg2->AddEntry(lin2,"Standard","l");
@@ -174,30 +185,37 @@ int main( int argc, char* argv[]){
   TLegend *leg6 = new TLegend(0.4,0.8,0.6,0.9);
   leg6->AddEntry(g_2614,"FEP_{2615}","PL");
   leg6->AddEntry(lin6,"Standard","l");
+  TLegend *leg7 = new TLegend(0.4,0.8,0.6,0.9);
+  leg7->AddEntry(g_edge,"C.Edge","PL");
+  leg7->AddEntry(lin7,"Standard","l");
 
   g_dep->SetMarkerColor(2);
   g_fep->SetMarkerColor(8);
   g_sep->SetMarkerColor(kMagenta+2);
   g_2614->SetMarkerColor(kTeal-7);
   g_bkg->SetMarkerColor(kMagenta-7);
+  g_edge->SetMarkerColor(kCyan+1);
 
   g_dep->SetLineColor(2);
   g_fep->SetLineColor(8);
   g_sep->SetLineColor(kMagenta+2);
   g_2614->SetLineColor(kTeal-7);
   g_bkg->SetLineColor(kMagenta-7);
+  g_edge->SetLineColor(kCyan+1);
 
   g_dep->SetLineWidth(2);
   g_fep->SetLineWidth(2);
   g_sep->SetLineWidth(2);
   g_2614->SetLineWidth(2);
   g_bkg->SetLineWidth(2);
+  g_edge->SetLineWidth(2);
 
   g_dep->SetMarkerStyle(20);
   g_fep->SetMarkerStyle(22);
   g_sep->SetMarkerStyle(23);
   g_2614->SetMarkerStyle(20);
   g_bkg->SetMarkerStyle(20);
+  g_edge->SetMarkerStyle(20);
 
   //c1->cd(4);
   g_sep->SetTitle(Form("chn[%d]",chn));
@@ -256,6 +274,16 @@ int main( int argc, char* argv[]){
   c1->Print(Form("%s/SF_bkg_chn%d.pdf",resdir,chn));
   //c1->Print(Form("%s/SF_FWHM_chn%d.pdf",resdir,chn));
   
+  g_edge->GetXaxis()->SetTitle("Weight");
+  g_edge->GetYaxis()->SetTitle("Survival Fraction [%]");
+  g_edge->SetTitle(Form("chn[%d]",chn));
+  g_edge->Draw("AP");
+  gPad->SetLogx();
+  leg7->Draw("same");
+  lin7->Draw();
+  c1->Update();
+  c1->Print(Form("%s/SF_edge_chn%d.pdf",resdir,chn));
+
   // SAVE ON ROOT FILE
   TFile *out = new TFile(Form("%s/PlotSF_chn%d.root",resdir,chn),"RECREATE"); 
   out->cd();
@@ -265,6 +293,7 @@ int main( int argc, char* argv[]){
   g_sep->Write();
   g_bkg->Write();
   g_2614->Write();
+  g_edge->Write();
   out->Close();
   
   //myapp->Run();
