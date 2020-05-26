@@ -36,5 +36,5 @@ Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_d
 Warning in <TFile::Append>: Replacing existing TH1: hene (Potential memory leak).
 Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
 Warning in <TCanvas::Constructor>: Deleting canvas with same name: c_4
-Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn12/chn12_PSA_bkg2350.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn12/chn12_PSA_bkg2380.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn12/chn12_AoE_all.pdf has been created

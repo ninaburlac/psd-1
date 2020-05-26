@@ -25,7 +25,7 @@ event n.15000000
 event n.16000000
 event n.17000000
 Selected events: 183136
-The time to read waveforms: 32.06 s
+The time to read waveforms: 33.15 s
 Initialization of DEP&FEP background  = 21
  FCN=118.079 FROM MIGRAD    STATUS=CONVERGED     212 CALLS         213 TOTAL
                      EDM=7.55055e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
@@ -342,6 +342,6 @@ Area_psa = 2984
 Calculation of survival fraction background at 2039
 Area = 6215
 Area_psa = 3032
-Calculation of survival fraction background at 2350
-Area = 14213
-Area_psa = 6877
+Calculation of survival fraction background at 2380
+Area = 2701
+Area_psa = 1231

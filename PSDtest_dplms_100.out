@@ -1,113 +1,98 @@
-4664279.xmaster.lngs.infn.it
+4664775.xmaster.lngs.infn.it
 qsub -N pd_0 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn0 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn0/psd_0.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn0/psd_0.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn0/script_chn0.sh
-4664281.xmaster.lngs.infn.it
+4664781.xmaster.lngs.infn.it
 qsub -N pd_1 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn1 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn1/psd_1.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn1/psd_1.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn1/script_chn1.sh
-4664284.xmaster.lngs.infn.it
+4664785.xmaster.lngs.infn.it
 qsub -N pd_2 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn2 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn2/psd_2.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn2/psd_2.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn2/script_chn2.sh
-4664289.xmaster.lngs.infn.it
+4664789.xmaster.lngs.infn.it
 qsub -N pd_3 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn3 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn3/psd_3.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn3/psd_3.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn3/script_chn3.sh
-4664293.xmaster.lngs.infn.it
+4664793.xmaster.lngs.infn.it
 qsub -N pd_4 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn4 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn4/psd_4.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn4/psd_4.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn4/script_chn4.sh
-4664297.xmaster.lngs.infn.it
+4664797.xmaster.lngs.infn.it
 qsub -N pd_5 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn5 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn5/psd_5.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn5/psd_5.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn5/script_chn5.sh
-4664301.xmaster.lngs.infn.it
+4664800.xmaster.lngs.infn.it
 qsub -N pd_6 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn6 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn6/psd_6.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn6/psd_6.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn6/script_chn6.sh
-4664305.xmaster.lngs.infn.it
+4664804.xmaster.lngs.infn.it
 qsub -N pd_7 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn7 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn7/psd_7.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn7/psd_7.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn7/script_chn7.sh
-4664309.xmaster.lngs.infn.it
+4664808.xmaster.lngs.infn.it
 qsub -N pd_8 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8/psd_8.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8/psd_8.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn8/script_chn8.sh
-4664313.xmaster.lngs.infn.it
+4664813.xmaster.lngs.infn.it
 qsub -N pd_9 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn9 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn9/psd_9.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn9/psd_9.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn9/script_chn9.sh
-4664317.xmaster.lngs.infn.it
+4664818.xmaster.lngs.infn.it
 qsub -N pd_10 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn10 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn10/psd_10.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn10/psd_10.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn10/script_chn10.sh
-4664321.xmaster.lngs.infn.it
+4664821.xmaster.lngs.infn.it
 qsub -N pd_11 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn11 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn11/psd_11.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn11/psd_11.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn11/script_chn11.sh
-4664326.xmaster.lngs.infn.it
+4664826.xmaster.lngs.infn.it
 qsub -N pd_12 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn12 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn12/psd_12.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn12/psd_12.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn12/script_chn12.sh
-4664330.xmaster.lngs.infn.it
+4664831.xmaster.lngs.infn.it
 qsub -N pd_13 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn13 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn13/psd_13.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn13/psd_13.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn13/script_chn13.sh
-4664334.xmaster.lngs.infn.it
+4664835.xmaster.lngs.infn.it
 qsub -N pd_14 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn14 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn14/psd_14.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn14/psd_14.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn14/script_chn14.sh
-4664338.xmaster.lngs.infn.it
+4664839.xmaster.lngs.infn.it
 qsub -N pd_15 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn15 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn15/psd_15.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn15/psd_15.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn15/script_chn15.sh
-4664342.xmaster.lngs.infn.it
+4664843.xmaster.lngs.infn.it
 qsub -N pd_16 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn16 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn16/psd_16.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn16/psd_16.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn16/script_chn16.sh
-4664346.xmaster.lngs.infn.it
+4664847.xmaster.lngs.infn.it
 qsub -N pd_17 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn17 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn17/psd_17.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn17/psd_17.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn17/script_chn17.sh
-4664350.xmaster.lngs.infn.it
+4664851.xmaster.lngs.infn.it
 qsub -N pd_18 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn18 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn18/psd_18.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn18/psd_18.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn18/script_chn18.sh
-4664354.xmaster.lngs.infn.it
+4664855.xmaster.lngs.infn.it
 qsub -N pd_19 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn19 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn19/psd_19.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn19/psd_19.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn19/script_chn19.sh
-4664358.xmaster.lngs.infn.it
+4664859.xmaster.lngs.infn.it
 qsub -N pd_20 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn20 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn20/psd_20.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn20/psd_20.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn20/script_chn20.sh
-4664360.xmaster.lngs.infn.it
+4664864.xmaster.lngs.infn.it
 qsub -N pd_21 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn21 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn21/psd_21.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn21/psd_21.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn21/script_chn21.sh
-4664364.xmaster.lngs.infn.it
+4664868.xmaster.lngs.infn.it
 qsub -N pd_22 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/psd_22.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/psd_22.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/script_chn22.sh
-4664368.xmaster.lngs.infn.it
+4664872.xmaster.lngs.infn.it
 qsub -N pd_23 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn23 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn23/psd_23.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn23/psd_23.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn23/script_chn23.sh
-4664372.xmaster.lngs.infn.it
+4664876.xmaster.lngs.infn.it
 qsub -N pd_24 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn24 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn24/psd_24.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn24/psd_24.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn24/script_chn24.sh
-4664377.xmaster.lngs.infn.it
+4664878.xmaster.lngs.infn.it
 qsub -N pd_25 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn25 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn25/psd_25.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn25/psd_25.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn25/script_chn25.sh
-4664380.xmaster.lngs.infn.it
+4664882.xmaster.lngs.infn.it
 qsub -N pd_26 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn26 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn26/psd_26.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn26/psd_26.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn26/script_chn26.sh
-4664384.xmaster.lngs.infn.it
+4664886.xmaster.lngs.infn.it
 qsub -N pd_27 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn27 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn27/psd_27.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn27/psd_27.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn27/script_chn27.sh
-4664388.xmaster.lngs.infn.it
+4664891.xmaster.lngs.infn.it
 qsub -N pd_28 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn28 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn28/psd_28.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn28/psd_28.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn28/script_chn28.sh
-4664392.xmaster.lngs.infn.it
+4664894.xmaster.lngs.infn.it
 qsub -N pd_29 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn29 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn29/psd_29.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn29/psd_29.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn29/script_chn29.sh
-4664395.xmaster.lngs.infn.it
+4664899.xmaster.lngs.infn.it
 qsub -N pd_30 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn30 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn30/psd_30.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn30/psd_30.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn30/script_chn30.sh
-4664399.xmaster.lngs.infn.it
+4664905.xmaster.lngs.infn.it
 qsub -N pd_31 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn31 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn31/psd_31.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn31/psd_31.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn31/script_chn31.sh
-4664403.xmaster.lngs.infn.it
+4664909.xmaster.lngs.infn.it
 qsub -N pd_32 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn32 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn32/psd_32.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn32/psd_32.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn32/script_chn32.sh
-4664407.xmaster.lngs.infn.it
+4664911.xmaster.lngs.infn.it
 qsub -N pd_33 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn33 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn33/psd_33.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn33/psd_33.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn33/script_chn33.sh
-4664411.xmaster.lngs.infn.it
+4664917.xmaster.lngs.infn.it
 qsub -N pd_34 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn34 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn34/psd_34.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn34/psd_34.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn34/script_chn34.sh
-4664417.xmaster.lngs.infn.it
+4664923.xmaster.lngs.infn.it
 qsub -N pd_35 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn35 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn35/psd_35.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn35/psd_35.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn35/script_chn35.sh
-4664422.xmaster.lngs.infn.it
+4664926.xmaster.lngs.infn.it
 qsub -N pd_36 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn36 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn36/psd_36.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn36/psd_36.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn36/script_chn36.sh
-4664427.xmaster.lngs.infn.it
+4664929.xmaster.lngs.infn.it
 qsub -N pd_37 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn37 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn37/psd_37.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn37/psd_37.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn37/script_chn37.sh
-4664431.xmaster.lngs.infn.it
+4664935.xmaster.lngs.infn.it
 qsub -N pd_38 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn38 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn38/psd_38.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn38/psd_38.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn38/script_chn38.sh
-4664434.xmaster.lngs.infn.it
+4664936.xmaster.lngs.infn.it
 qsub -N pd_39 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn39 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn39/psd_39.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn39/psd_39.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn39/script_chn39.sh
-4664437.xmaster.lngs.infn.it
+4664937.xmaster.lngs.infn.it
 qsub -N pd_40 -q gerda -V -d /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn40 -m abe -e localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn40/psd_40.err -o localhost:/nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn40/psd_40.out -l mem=4000mb /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn40/script_chn40.sh
 qstat -u burlac |  grep pd_ | wc -l 
 123
 123
-123
-123
-123
-122
-120
-118
-114
-112
 108
-103
-101
-95
-93
-90
-88
-84
-73
-67
-62
-45
-42
-30
-17
-13
-1
+106
+81
+71
+49
+26
+18
+16
+11
+5
 0
 cat /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn0/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn1/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn2/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn3/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn4/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn5/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn6/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn7/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn11/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn12/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn13/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn14/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn15/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn16/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn17/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn18/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn19/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn20/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn21/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn23/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn24/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn25/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn26/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn30/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn31/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn33/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn34/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn35/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn37/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn38/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn39/PSA_results.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn40/PSA_results.txt  > /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/PSA_results_dplms.txt/nfs/gerda6/users/burlac/psd_dplms/plotSF_AoE /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/PSA_results_dplms.txt /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100 DPLMS-100 > /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/plot.outInfo in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/SF_peaks_DPLMS-100.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/FWHM_AoE_DPLMS-100.pdf has been created

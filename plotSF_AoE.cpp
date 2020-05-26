@@ -192,7 +192,7 @@ int main( int argc, char* argv[]){
   leg->AddEntry(g_sep,"SEP","PL");
   leg->AddEntry(g_2614,"FEP_{2615}","PL");
   leg->AddEntry(g_bkg,"ROI","PL");
-  leg->AddEntry(g_edge,"C.Edge","PL");
+  leg->AddEntry(g_edge,"CE","PL");
   leg->Draw();
   c1->Update();
   c1->Print(Form("%s/SF_peaks_%s.pdf",resdir,text));

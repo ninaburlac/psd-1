@@ -25,7 +25,7 @@ event n.15000000
 event n.16000000
 event n.17000000
 Selected events: 0
-The time to read waveforms: 48.1 s
+The time to read waveforms: 50.52 s
 Initialization of DEP&FEP background  = 0
  FCN=0 FROM HESSE     STATUS=FAILED         11 CALLS         405 TOTAL
                      EDM=0    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent

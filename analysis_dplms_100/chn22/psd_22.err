@@ -1,4 +1,3 @@
-/etc/profile.d/lngs.sh: line 1: ulimit: max memory size: cannot modify limit: Operazione non permessa
 -bash: /users/b/burlac/.bash_profile: Permesso negato
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/chn22_spectrum.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/chn22_DEP_FEP.pdf has been created
@@ -37,5 +36,5 @@ Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_d
 Warning in <TFile::Append>: Replacing existing TH1: hene (Potential memory leak).
 Warning in <TFile::Append>: Replacing existing TH1: hene_psa (Potential memory leak).
 Warning in <TCanvas::Constructor>: Deleting canvas with same name: c_4
-Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/chn22_PSA_bkg2350.pdf has been created
+Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/chn22_PSA_bkg2380.pdf has been created
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_100/chn22/chn22_AoE_all.pdf has been created

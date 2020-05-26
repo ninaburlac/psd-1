@@ -4,4 +4,4 @@ Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_d
 Info in <TCanvas::Print>: pdf file /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn8/chn8_AoE.pdf has been created
 terminate called after throwing an instance of 'std::out_of_range'
   what():  vector::_M_range_check
-/var/lib/torque/mom_priv/jobs/4664310.xmaster.lngs.infn.it.SC: line 6:  5409 Annullato               (core dumped) /nfs/gerda6/users/burlac/psd_dplms/processPSD /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn8 /nfs/gerda6/users/burlac/psd/analysis/run0098-cal_dplms_10.tier.root 8 1 10 > /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn8/psd_chn8.out
+/var/lib/torque/mom_priv/jobs/4664806.xmaster.lngs.infn.it.SC: line 6:  8087 Annullato               (core dumped) /nfs/gerda6/users/burlac/psd_dplms/processPSD /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn8 /nfs/gerda6/users/burlac/psd/analysis/run0098-cal_dplms_10.tier.root 8 1 10 > /nfs/gerda6/users/burlac/psd_dplms/analysis_dplms_10/chn8/psd_chn8.out

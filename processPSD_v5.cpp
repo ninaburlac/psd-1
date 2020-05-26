@@ -530,7 +530,7 @@ int main( int argc, char* argv[]){
   vector<double> SF_2104 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, b, 2104);
   vector<double> SF_2614 = calculateSF(chn, resdir, energies, AoEs, mean_aoe, n_sigma, AoE_lowCut, b, 2614.5);
   vector<double> SF_qbb = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, b, 2039, 35);
-  vector<double> SF_edge = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, b, 2350, 50);
+  vector<double> SF_edge = calculateSF_bkg(chn, resdir, energies, AoEs, mean_aoe, AoE_lowCut, b, 2380, 10);
   
   //-------- Save results in file --------
   std::ofstream fileres;
@@ -585,7 +585,7 @@ int main( int argc, char* argv[]){
   leg_p->AddEntry(h_2104,"SEP","l");
   leg_p->AddEntry(h_2614,"FEP_{2615}","l");
   leg_p->AddEntry(h_qbb,"ROI","l");
-  leg_p->AddEntry(h_edge,"C. edge","l");
+  leg_p->AddEntry(h_edge,"CE","l");
   leg_p->Draw();
   c1->Update();
   c1->Print(Form("%s/chn%d_AoE_all.pdf",resdir,chn));
